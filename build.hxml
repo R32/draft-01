@@ -1,6 +1,5 @@
 -dce std
 -cp src
--cp G:/MyDoc/haxe/labs/misc/utils
 -main App
 -D analyzer-optimize
 -D js-es=3

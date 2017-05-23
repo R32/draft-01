@@ -1,8 +1,15 @@
-// variables
-var header_height = 20px;
-var slicer_width = 320px;
 
-
+// Color, copy from bootstrap
+var white  = #fff;
+var black  = #000;
+var red    = #d9534f;
+var orange = #f0ad4e;
+var yellow = #ffd500;
+var green  = #5cb85c;
+var blue   = #0275d8;
+var teal   = #5bc0de;
+var pink   = #ff5b77;
+var purple = #613d7c;
 
 @include("/*CSS RESET*/\nhtml{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}\n")
 
@@ -10,20 +17,19 @@ body {
 	font-size: 15px;
 }
 
-.neg-c { color: #ff0000;}
-.warn-c{ color: #ff4800;}
 
+var hdHeight = 20px;
 #header {
 	position: absolute;
 	top: 0;
-	height: $header_height;
+	height: $hdHeight;
 	width: 100%;
 	background: #CCC;
 }
 
 #leftSiderbar {
 	position: absolute;
-	top: $header_height;
+	top: $hdHeight;
 	left: 0;
 	width: 500px;
 	background: #ff0;
@@ -32,26 +38,28 @@ body {
 
 #mainContainer {
 	position: absolute;
-	top: $header_height;
+	top: $hdHeight;
 	left: 500px;
 	background: #00f;
 	text-align: left;
 }
 
-
 #hidden-box {
 	position: absolute;
-	bottom: 0;
 	display: none;
+	width: 0;
+	height: 0;
+	bottom: 0;
+	overflow: hidden;
 }
-
 
 // ui.Slider
 div.r-slider {
+	var WIDTH = 120px;
 	padding: 0;
 	position: relative;
 	display: inline-block;
-	width: $slicer_width;
+	width: $WIDTH;
 	height: 10px;
 	background: #aaa;
 	font-size: 6px;
@@ -59,7 +67,7 @@ div.r-slider {
 	.thumb {
 		position: absolute;
 		top: -10px;
-		left: $slicer_width - 20;
+		left: $WIDTH - 20;
 		width: 20px;
 		height: 30px;
 		cursor: e-resize;
@@ -72,7 +80,7 @@ div.r-slider {
 		top: 0;
 		left: 0;
 		height:  10px;
-		width: $slicer_width;
+		width: $WIDTH;
 		margin: 0;
 		padding: 0;
 		background-color: #57A957;
