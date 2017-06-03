@@ -1,0 +1,43 @@
+
+#hidden_box {
+	position: absolute;
+	display: none;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+// ui.Slider
+div.r-slider {
+	var WIDTH = 120px;
+	padding: 0;
+	position: relative;
+	display: inline-block;
+	width: $WIDTH;
+	height: 10px;
+	background: #aaa;
+	font-size: 6px;
+
+	.thumb {
+		position: absolute;
+		top: -10px;
+		left: $WIDTH - 20;
+		width: 20px;
+		height: 30px;
+		cursor: e-resize;
+		background-color: #57A957;
+		opacity: 0.8;
+	}
+
+	.rail {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height:  10px;
+		width: $WIDTH;
+		margin: 0;
+		padding: 0;
+		background-color: #57A957;
+	}
+}

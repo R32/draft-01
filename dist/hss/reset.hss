@@ -1,0 +1,291 @@
+@import("vars");
+
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+  font-family: sans-serif;
+}
+
+*, CSS("*:before, *:after") {
+  box-sizing :inherit;
+}
+
+body {
+  margin: 0;
+  font-family: $body-font;
+  font-size: $body-font-size;
+  font-weight: normal;
+  line-height: $body-line-height;
+  color: $text-gray-dark;
+  background-color: $bg-white;
+}
+
+/* HTML5 display definitions */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { display: block; }
+summary { display: CSS("list-item"); }
+audio, canvas, progress, video, output { display: inline-block; }
+audio:not([controls]) { display: none; height: 0; }
+progress { vertical-align: baseline;}
+template, [hidden] { display: none !important;}
+svg:not(:root) { overflow: hidden; }
+figure {margin: 1em 40px;}
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin: $font16 0;
+  border: 0;
+  border-top: 1px solid #DDD; // IE8 deos not support RGBA()
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: $font16 * 0.5;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $font16;
+}
+
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: $font16;
+}
+
+ol ol, ul ul, ol ul, ul ol {
+  margin-bottom: 0;
+}
+
+dt { font-weight: bold;}
+
+dd {
+  margin-bottom: $font16 * 0.5;
+  margin-left: 0;
+}
+
+blockquote { margin: 0 0 $font16 0;}
+
+b, strong { font-weight: bolder;}
+
+small { font-size: 80%; }
+
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sub { bottom: -.25em; }
+sup { top: -.5em; }
+
+a {
+  color: $text-blue;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus {
+  outline: $zero;
+}
+
+pre, code, kbd, samp {
+  font-family: $mono-font;
+  font-size: $font14;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: $font14;
+  overflow: auto;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: $font16 * 0.75;
+  padding-bottom: $font16 * 0.75;
+  color: $gray-light;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  text-align: left;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: $font8;
+}
+
+button:focus {
+  outline: CSS("dotted 1px");
+  outline: CSS("5px auto -webkit-focus-ring-color");
+}
+
+input, button, select, optgroup, textarea {
+  margin: 0;            // Remove the margin in Firefox and Safari
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input {
+  overflow: visible;    // Show the overflow in Edge
+}
+
+button, select {
+  text-transform: none; // Remove the inheritance of text transform in Firefox
+}
+
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+	@include('
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+	')
+  // Remove the default appearance of temporal inputs to avoid a Mobile Safari
+  // bug where setting a custom line-height prevents text from being vertically
+  // centered within the input.
+  // See https://bugs.webkit.org/show_bug.cgi?id=139848
+  // and https://github.com/twbs/bootstrap/issues/11266
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;// 1. Add the correct box sizing in IE 10-
+  padding: 0;            // 2. Remove the padding in IE 10-
+}
+
+textarea {
+  overflow: auto; // Remove the default vertical scrollbar in IE.
+  // Textareas should really only resize vertically so they don't break their (horizontal) containers.
+  resize: vertical;
+}
+
+fieldset {
+  // Browsers set a default `min-width: min-content;` on fieldsets,
+  // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
+  // So we reset that to ensure fieldsets behave more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359
+  // and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+  min-width: 0;
+  // Reset the default outline behavior of fieldsets so they don't affect page layout.
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+// 1. Correct the text wrapping in Edge and IE.
+// 2. Correct the color inheritance from `fieldset` elements in IE.
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%; // 1
+  padding: 0;
+  margin-bottom: $font16 * .5;
+  font-size: $font16 * 1.5;
+  line-height: inherit;
+  color: inherit;  // 2
+  white-space: normal; // 1
+}
+
+progress {
+  vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
+}
+
+	@include('
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+	')
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: $font16 * 0.5;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1, .h1 { font-size: $font16 * 2.5; }
+
+h2, .h2 { font-size: $font16 * 2; }
+
+h3, .h3 { font-size: $font16 * 1.75; }
+
+h4, .h4 { font-size: $font16 * 1.5; }
+
+h5, .h5 { font-size: $font16 * 1.25; }
+
+h6, .h6 { font-size: $font16; }
+
+.lead {
+  font-size: $font16 * 1.25;
+  font-weight: 300;
+}
+
+small, .small {
+	font-size: 80%;
+	font-weight: normal;
+}
+
+mark, .mark {
+  padding: 0.2em;
+  background-color: #fcf8e3;
+}
+
+.octicon {
+  vertical-align: text-bottom;
+}

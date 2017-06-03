@@ -4,22 +4,17 @@ package;
 import haxe.macro.Context;
 import haxe.macro.Type;
 import haxe.macro.Expr;
-import haxe.macro.PositionTools.here;
 import StringTools.hex;
 using haxe.macro.TypeTools;
 
 class MyMacro {
 	public static function make() {
 		var url:String;
-		var gids:ClassType;
 		var pos = Context.currentPos();
 
-		switch(Context.getLocalType()){
-			case TInst(t, [TInst(c, _)]):
-				if (StringTools.fastCodeAt(c.toString(), 0) == "S".code){
-					gids = t.get();
-					url = c.toString().substr(1);
-				}
+		switch(Context.getLocalType()) {
+			case TInst(_, [TInst(_.get() => { kind: KExpr(macro $v{(s:String)}) },_)]):
+				url = s;
 			default:
 				Context.error("Class expected", pos);
 		}
@@ -33,7 +28,7 @@ class MyMacro {
 		var fstart = ftext.indexOf("<body");
 		if (fstart > -1) ftext = ftext.substr(fstart);
 
-		// get id
+		// get ids
 		var ri = ~/ id="([A-Za-z_][A-Za-z0-9_-]+)"/;
 		var ids = new List<String>();
 		var text = ftext;
@@ -53,7 +48,7 @@ class MyMacro {
 		};
 		pushes(tdi.fields, ids, pos);
 
-		// get class
+		// get classes
 		var rc = ~/ class="([A-Za-z_][ A-Za-z0-9_-]+)"/;
 		var cls = new List<String>();
 		text = ftext;

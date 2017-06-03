@@ -1,21 +1,5 @@
-
-// Color, copy from bootstrap
-var white  = #fff;
-var black  = #000;
-var red    = #d9534f;
-var orange = #f0ad4e;
-var yellow = #ffd500;
-var green  = #5cb85c;
-var blue   = #0275d8;
-var teal   = #5bc0de;
-var pink   = #ff5b77;
-var purple = #613d7c;
-
-@include("/*CSS RESET*/\nhtml{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}\n")
-
-body {
-	font-size: 15px;
-}
+@import("hss/vars");
+@import("hss/reset");
 
 
 var hdHeight = 20px;
@@ -40,49 +24,56 @@ var hdHeight = 20px;
 	position: absolute;
 	top: $hdHeight;
 	left: 500px;
-	background: #00f;
+	background: #ddf;
 	text-align: left;
 }
 
-#hidden-box {
-	position: absolute;
-	display: none;
-	width: 0;
-	height: 0;
-	bottom: 0;
-	overflow: hidden;
+
+@import("hss/comp");
+
+.bg-white {
+	background: $white;
+}
+.bg-black {
+	background: $black;
+}
+.bg-red {
+	background: $red;
+}
+.bg-orange {
+	background: $orange;
+}
+.bg-yellow {
+	background: $yellow;
+}
+.bg-green {
+	background: $green;
+}
+.bg-blue {
+	background: $blue;
+}
+.bg-teal {
+	//background: $teal;
+}
+.bg-pink {
+	//background: $pink;
+}
+.bg-purple {
+	background: $purple;
+}
+.bg-gray-dark {
+	background: $gray-dark;
+}
+.bg-gray{
+	background: $gray;
 }
 
-// ui.Slider
-div.r-slider {
-	var WIDTH = 120px;
-	padding: 0;
-	position: relative;
-	display: inline-block;
-	width: $WIDTH;
-	height: 10px;
-	background: #aaa;
-	font-size: 6px;
-
-	.thumb {
-		position: absolute;
-		top: -10px;
-		left: $WIDTH - 20;
-		width: 20px;
-		height: 30px;
-		cursor: e-resize;
-		background-color: #57A957;
-		opacity: 0.8;
-	}
-
-	.rail {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height:  10px;
-		width: $WIDTH;
-		margin: 0;
-		padding: 0;
-		background-color: #57A957;
-	}
+.bg-gray-light {
+	background: $gray-light;
+}
+.bg-gray-lighter {
+	//background: $gray-lighter;
+}
+.bg-gray-lightest{
+	//background: $gray-lightest;
 }
