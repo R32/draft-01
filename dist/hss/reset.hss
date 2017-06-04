@@ -1,13 +1,10 @@
 @import("vars");
 
+* { box-sizing: border-box; }
+
 html {
-  box-sizing: border-box;
   line-height: 1.15;
   font-family: sans-serif;
-}
-
-*, CSS("*:before, *:after") {
-  box-sizing :inherit;
 }
 
 body {
@@ -85,23 +82,17 @@ sub { bottom: -.25em; }
 sup { top: -.5em; }
 
 a {
-  color: $text-blue;
+  color: inherit;
   text-decoration: none;
+  outline: 0;
+}
+
+a[href] {
+  color: $text-blue;
   &:hover,
   &:active {
     text-decoration: underline;
   }
-}
-a:not([href]):not([tabindex]) {
-  color: inherit;
-  text-decoration: none;
-}
-a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-  color: inherit;
-  text-decoration: none;
-}
-a:not([href]):not([tabindex]):focus {
-  outline: $zero;
 }
 
 pre, code, kbd, samp {
@@ -142,11 +133,6 @@ label {
   margin-bottom: $font8;
 }
 
-button:focus {
-  outline: CSS("dotted 1px");
-  outline: CSS("5px auto -webkit-focus-ring-color");
-}
-
 input, button, select, optgroup, textarea {
   margin: 0;            // Remove the margin in Firefox and Safari
   font-family: inherit;
@@ -163,7 +149,7 @@ button, select {
 }
 
 // Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
-	@include('
+    @include('
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -178,7 +164,7 @@ input[type="datetime-local"],
 input[type="month"] {
   -webkit-appearance: listbox;
 }
-	')
+    ')
   // Remove the default appearance of temporal inputs to avoid a Mobile Safari
   // bug where setting a custom line-height prevents text from being vertically
   // centered within the input.
@@ -228,7 +214,7 @@ progress {
   vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
 }
 
-	@include('
+    @include('
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -248,7 +234,7 @@ progress {
   font: inherit;
   -webkit-appearance: button;
 }
-	')
+    ')
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -277,8 +263,8 @@ h6, .h6 { font-size: $font16; }
 }
 
 small, .small {
-	font-size: 80%;
-	font-weight: normal;
+  font-size: 80%;
+  font-weight: normal;
 }
 
 mark, .mark {

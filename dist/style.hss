@@ -1,6 +1,6 @@
 @import("hss/vars");
 @import("hss/reset");
-
+@import("hss/button");
 
 var hdHeight = 20px;
 #header {
@@ -30,50 +30,4 @@ var hdHeight = 20px;
 
 
 @import("hss/comp");
-
-.bg-white {
-	background: $white;
-}
-.bg-black {
-	background: $black;
-}
-.bg-red {
-	background: $red;
-}
-.bg-orange {
-	background: $orange;
-}
-.bg-yellow {
-	background: $yellow;
-}
-.bg-green {
-	background: $green;
-}
-.bg-blue {
-	background: $blue;
-}
-.bg-teal {
-	//background: $teal;
-}
-.bg-pink {
-	//background: $pink;
-}
-.bg-purple {
-	background: $purple;
-}
-.bg-gray-dark {
-	background: $gray-dark;
-}
-.bg-gray{
-	background: $gray;
-}
-
-.bg-gray-light {
-	background: $gray-light;
-}
-.bg-gray-lighter {
-	//background: $gray-lighter;
-}
-.bg-gray-lightest{
-	//background: $gray-lightest;
-}
+@import("hss/misc");

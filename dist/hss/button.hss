@@ -1,0 +1,265 @@
+
+var btn-bd-radius = 3px;
+.btn {
+  var bgDef = $bg-gray-light;
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: $body-font-size;
+  font-weight: $font-weight-bold;
+  font-family: "微软雅黑", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 20px; // Specifically not inherit our `<body>` default
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid $gray-300;
+  border-radius: $btn-bd-radius;
+  color: $gray-800;
+  //background: linear-gradient($bg-gray-light, $gray-100);
+  background-color: $bgDef;
+  appearance: CSS("none"); // Corrects inability to style clickable `input` types in iOS.
+  i {
+    font-style: normal;
+    font-weight: normal;
+    color: $gray-600;
+  }
+
+  .octicon {
+    vertical-align: text-top;
+  }
+
+  .counter {
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: $text-gray-light;
+    background-color: $bgDef * 0.95;
+    border-radius: 20px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $bgDef * 0.9;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $blue-300;
+  }
+
+  &:active,
+  &.selected {
+    background-color: $bgDef * 0.85;
+  }
+}
+
+.btn-primary {
+  var bgDef = $green;
+  color: $gray-100;
+  background-color: $bgDef;
+  .counter {
+    color: $bgDef;
+    background-color: $gray-100;
+  }
+  &:hover {
+    color: $white;
+    background-color: $bgDef * 0.9;
+  }
+  &:active,
+  &.selected {
+    background-color: $bgDef * 0.8;
+  }
+}
+
+
+.btn-primary[disabled], .btn-primary.disabled {
+  background-color: $green !important;
+  color: $white;
+}
+
+
+.btn-danger {
+  var bgDef = $red-400;
+  color: $text-red;
+
+  &:hover {
+    color: $white;
+    background-color: $bgDef;
+    .counter {
+      color: $bgDef;
+      background-color: $white;
+    }
+  }
+
+  &:active,
+  &.selected {
+    background-color: $bgDef * 0.8;
+  }
+}
+
+.btn-danger[disabled], .btn-danger.disabled {
+  //background-color: $red !important;
+  color: $text-red;
+}
+
+.btn-outline {
+  var bgDef = $blue-400;
+  color: $text-blue;
+
+  &:hover {
+    color: $white;
+    background-color: $bgDef;
+    .counter {
+      color: $bgDef;
+      background-color: $white;
+    }
+  }
+
+  &:active,
+  &.selected {
+    background-color: $bgDef * 0.8;
+  }
+}
+
+.btn-outline[disabled], .btn-outline.disabled {
+  //background-color: $blue-400 !important;
+  color: $text-blue;
+}
+
+.btn-sm {
+  padding: 3px 10px;
+  font-size: $font-size-small;
+  line-height: 20px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+
+/*!
+```html
+<div class="clearfix">
+  <a class="btn btn-sm btn-with-count" href="#" role="button">
+    <span class="octicon octicon-eye"></span>
+    Watch
+  </a>
+  <a class="social-count" href="#">6</a>
+</div>
+```
+*/
+a.btn-with-count {
+  float: left;
+  border-radius: $btn-bd-radius 0 0 $btn-bd-radius;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+a.social-count {
+  var bgDef = $bg-gray-light;
+  float: left;
+  padding: 3px 7px;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  line-height: 20px;
+  color: $text-gray-dark;
+  vertical-align: middle;
+  background-color: $bgDef;
+  border: 1px solid $gray-300; // match with .btn
+  border-left: 0;
+  border-radius: 0 $btn-bd-radius $btn-bd-radius 0;
+  &:hover {
+    text-decoration: none;
+    color: $text-blue;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+
+/*!
+```html
+<span class="hidden-text-expander">
+  <button type="button" class="ellipsis-expander">&hellip;</button>
+</span>
+```
+*/
+.hidden-text-expander {
+  display: block;
+  &.inline {
+    position: relative;
+    display: inline-block;
+    top: -1px;
+    margin-right: 5px;
+    line-height: 0;
+  }
+}
+
+.hidden-text-expander a,
+.ellipsis-expander {
+  display: inline-block;
+  height: 12px;
+  padding: 0 5px 5px 5px;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  line-height: 6px;
+  color: $gray-700;
+  text-decoration: none;
+  vertical-align: middle;
+  background: #ddd;
+  border: 0;
+  border-radius: 1px;
+  &:hover {
+    text-decoration: none;
+    background-color: #ccc;
+  }
+  &:active {
+    color: $text-white;
+    background-color: $blue-400;
+  }
+}
+
+
+
+// button group
+.btn-group {
+  display: inline-block;
+  vertical-align: middle;
+  $clearfix;
+
+  .btn {
+    position: relative;
+    float: left;
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: $btn-bd-radius 0 0 $btn-bd-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 $btn-bd-radius $btn-bd-radius 0;
+    }
+
+    &:active, &.selected {
+      z-index: 2;
+    }
+
+    &:focus {
+      z-index: 3;
+    }
+  }
+
+  .btn + .btn {
+    margin-left: -1px;
+  }
+}
