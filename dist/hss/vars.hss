@@ -2,7 +2,6 @@ var font8  =  8px;
 var font14 = 14px;
 var font16 = 16px;
 
-
 var clearfix = {
   &:before {
     display: table;
@@ -137,13 +136,13 @@ var gray =        $gray-500;
 * copy from primer-support/lib/variables/color.scss
 */
 // State indicators.
-var status-pending    = #caa21a;                      //desaturate($yellow-700, 15%);
+var status-pending    = desaturate($yellow-700, 15%);
 
 // Repository type colors
 // Should be able to deprecate these in future
 var repo-private-text = $black-fade-70;
 var repo-private-bg   = $yellow-000;
-var repo-private-icon = rgba(115, 92, 15, 0.5);       // transparentize($yellow-900, 0.5);
+var repo-private-icon = rgba($yellow-900, 0.5);
 
 // Highlight used for things like search
 var highlight-yellow  = rgba(255, 247, 140, 0.5);
@@ -153,15 +152,15 @@ var border-black-fade = $black-fade-15;
 var border-blue       = $blue-500;
 var border-blue-light = $blue-200;
 var border-green      = $green-400;
-var border-green-light= #a2cbac;                      // desaturate($green-300, 40%);
+var border-green-light= desaturate($green-300, 40%);
 var border-purple     = $purple;
 var border-red        = $red;
-var border-red-light  = #cea0a5;                      // desaturate($red-300, 60%);
+var border-red-light  = desaturate($red-300, 60%);
 var border-purple     = $purple;
-var border-yellow     = #d9d0a5;                      // desaturate($yellow-300, 60%);
+var border-yellow     = desaturate($yellow-300, 60%);
 var border-gray-dark  = $gray-300;
 var border-gray-darker= $gray-700;
-var border-gray-light = #eaecef;                      // lighten($gray-200, 3%);
+var border-gray-light = lighten($gray-200, 3%);
 var border-gray       = $gray-200;
 
 // Background colors

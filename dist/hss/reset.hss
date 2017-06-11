@@ -149,7 +149,6 @@ button, select {
 }
 
 // Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
-    @include('
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -164,23 +163,14 @@ input[type="datetime-local"],
 input[type="month"] {
   -webkit-appearance: listbox;
 }
-    ')
-  // Remove the default appearance of temporal inputs to avoid a Mobile Safari
-  // bug where setting a custom line-height prevents text from being vertically
-  // centered within the input.
-  // See https://bugs.webkit.org/show_bug.cgi?id=139848
-  // and https://github.com/twbs/bootstrap/issues/11266
 
 input[type="radio"],
 input[type="checkbox"] {
-  box-sizing: border-box;// 1. Add the correct box sizing in IE 10-
-  padding: 0;            // 2. Remove the padding in IE 10-
+  padding: 0;
 }
 
 textarea {
-  overflow: auto; // Remove the default vertical scrollbar in IE.
-  // Textareas should really only resize vertically so they don't break their (horizontal) containers.
-  resize: vertical;
+  overflow: auto;
 }
 
 fieldset {
@@ -214,7 +204,6 @@ progress {
   vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
 }
 
-    @include('
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -234,7 +223,7 @@ progress {
   font: inherit;
   -webkit-appearance: button;
 }
-    ')
+
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {

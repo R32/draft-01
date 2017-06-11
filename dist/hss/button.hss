@@ -101,7 +101,6 @@ var btn-bd-radius = 3px;
 }
 
 .btn-danger[disabled], .btn-danger.disabled {
-  //background-color: $red !important;
   color: $text-red;
 }
 
@@ -125,7 +124,6 @@ var btn-bd-radius = 3px;
 }
 
 .btn-outline[disabled], .btn-outline.disabled {
-  //background-color: $blue-400 !important;
   color: $text-blue;
 }
 
@@ -216,12 +214,12 @@ a.social-count {
   color: $gray-700;
   text-decoration: none;
   vertical-align: middle;
-  background: #ddd;
+  background: lighten($gray-300, 5%);
   border: 0;
   border-radius: 1px;
   &:hover {
     text-decoration: none;
-    background-color: #ccc;
+    background-color: darken($gray-300, 4%);
   }
   &:active {
     color: $text-white;
@@ -241,9 +239,11 @@ a.social-count {
     position: relative;
     float: left;
     border-radius: 0;
+    margin-left: -1px;
 
     &:first-child {
       border-radius: $btn-bd-radius 0 0 $btn-bd-radius;
+      margin-left: 0;
     }
 
     &:last-child {
@@ -257,9 +257,5 @@ a.social-count {
     &:focus {
       z-index: 3;
     }
-  }
-
-  .btn + .btn {
-    margin-left: -1px;
   }
 }

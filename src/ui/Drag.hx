@@ -74,7 +74,7 @@ class Drag {
 		if (e == null) untyped e = window.event;
 		try {
 			callb(e.screenX - sx, e.screenY - sy, false);
-		} catch (err: js.Error) {
+		} catch (err: Dynamic) {
 			stop();
 		}
 	#if !no_throttle

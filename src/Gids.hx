@@ -81,12 +81,12 @@ class MyMacro {
 			fields: [{
 				name : "ids",
 				pos  : pos,
-				kind : FVar(TPath({pack: tdi.pack, name: tdi.name})),
+				kind: FProp("default", "never", TPath({pack: tdi.pack, name: tdi.name})),
 				access : [AStatic],
 			}, {
 				name : "cls",
 				pos  : pos,
-				kind : FVar(TPath({pack: tdc.pack, name: tdc.name})),
+				kind: FProp("default", "never", TPath({pack: tdc.pack, name: tdc.name})),
 				access : [AStatic],
 			}]
 		};
