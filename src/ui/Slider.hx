@@ -73,8 +73,14 @@ class Slider {
 		if (e == null) untyped e = window.event;
 		Macros.event_stopPropagation();
 		Macros.event_preventDefault();
-		inst = this;
 		Drag.start(e, onDragging);
+	}
+
+	function onDragging(x: Int, y: Int, isEnd: Bool) {
+		if (isEnd)
+			onEnd(x);
+		else
+			onMov(x);
 	}
 
 	function onClick(e: MouseEvent) {
@@ -85,16 +91,6 @@ class Slider {
 			update(v, true);
 		}
 		Macros.event_stopPropagation();
-	}
-
-	static var inst: Slider;
-	static function onDragging(x: Int, y: Int, isEnd: Bool): Void {
-		if (isEnd) {
-			inst.onEnd(x);
-			inst = null;
-		} else {
-			inst.onMov(x);
-		}
 	}
 
 	public static var MARK =

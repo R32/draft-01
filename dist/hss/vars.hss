@@ -14,98 +14,93 @@ var clearfix = {
   }
 }
 
-/*!
-* copy from primer-support/lib/variables/color-system.scss
-*/
-
+// copy from primer-support/lib/variables/color-system.scss
 // -------- Grays --------
-var gray-000 =        #fafbfc;
-var gray-100 =        #f6f8fa;
-var gray-200 =        #e1e4e8;
-var gray-300 =        #d1d5da;
-var gray-400 =        #959da5;
-var gray-500 =        #6a737d;
-var gray-600 =        #586069;
-var gray-700 =        #444d56;
-var gray-800 =        #2f363d;
-var gray-900 =        #24292e; // body font color
+var gray-000   = #fafbfc;
+var gray-100   = #f6f8fa;
+var gray-200   = #e1e4e8;
+var gray-300   = #d1d5da;
+var gray-400   = #959da5;
+var gray-500   = #6a737d;
+var gray-600   = #586069;
+var gray-700   = #444d56;
+var gray-800   = #2f363d;
+var gray-900   = #24292e; // body font color
 
 // -------- Blue --------
-var blue-000 =        #f1f8ff;
-var blue-100 =        #dbedff;
-var blue-200 =        #c8e1ff;
-var blue-300 =        #79b8ff;
-var blue-400 =        #2188ff;
-var blue-500 =        #0366d6; // Default. Passes AA with #fff
-var blue-600 =        #005cc5;
-var blue-700 =        #044289;
-var blue-800 =        #032f62;
-var blue-900 =        #05264c; // Passes with 1/2/300 blues
+var blue-000   = #f1f8ff;
+var blue-100   = #dbedff;
+var blue-200   = #c8e1ff;
+var blue-300   = #79b8ff;
+var blue-400   = #2188ff;
+var blue-500   = #0366d6; // Default. Passes AA with #fff
+var blue-600   = #005cc5;
+var blue-700   = #044289;
+var blue-800   = #032f62;
+var blue-900   = #05264c; // Passes with 1/2/300 blues
 
 // -------- Green --------
-var green-000 =       #f0fff4;
-var green-100 =       #dcffe4;
-var green-200 =       #bef5cb;
-var green-300 =       #85e89d;
-var green-400 =       #34d058;
-var green-500 =       #28a745; // Default. passes AA Large
-var green-600 =       #22863a; // Text green, passes AA on #fff
-var green-700 =       #176f2c;
-var green-800 =       #165c26;
-var green-900 =       #144620;
+var green-000  = #f0fff4;
+var green-100  = #dcffe4;
+var green-200  = #bef5cb;
+var green-300  = #85e89d;
+var green-400  = #34d058;
+var green-500  = #28a745; // Default. passes AA Large
+var green-600  = #22863a; // Text green, passes AA on #fff
+var green-700  = #176f2c;
+var green-800  = #165c26;
+var green-900  = #144620;
 
 // -------- Yellow --------
-var yellow-000 =      #fffdef;
-var yellow-100 =      #fffbdd;
-var yellow-200 =      #fff5b1;
-var yellow-300 =      #ffea7f;
-var yellow-400 =      #ffdf5d;
-var yellow-500 =      #ffd33d;
-var yellow-600 =      #f9c513;
-var yellow-700 =      #dbab09;
-var yellow-800 =      #b08800;
-var yellow-900 =      #735c0f;
+var yellow-000 = #fffdef;
+var yellow-100 = #fffbdd;
+var yellow-200 = #fff5b1;
+var yellow-300 = #ffea7f;
+var yellow-400 = #ffdf5d;
+var yellow-500 = #ffd33d;
+var yellow-600 = #f9c513;
+var yellow-700 = #dbab09;
+var yellow-800 = #b08800;
+var yellow-900 = #735c0f;
 
 // -------- Orange --------
-var orange-000 =      #fff8f2;
-var orange-100 =      #ffebda;
-var orange-200 =      #ffd1ac;
-var orange-300 =      #ffab70;
-var orange-400 =      #fb8532;
-var orange-500 =      #f66a0a; // Default. passes AA Large with #fff
-var orange-600 =      #e36209;
-var orange-700 =      #d15704;
-var orange-800 =      #c24e00;
-var orange-900 =      #a04100;
+var orange-000 = #fff8f2;
+var orange-100 = #ffebda;
+var orange-200 = #ffd1ac;
+var orange-300 = #ffab70;
+var orange-400 = #fb8532;
+var orange-500 = #f66a0a; // Default. passes AA Large with #fff
+var orange-600 = #e36209;
+var orange-700 = #d15704;
+var orange-800 = #c24e00;
+var orange-900 = #a04100;
 
 // -------- Red --------
-var red-000 =         #ffeef0;
-var red-100 =         #ffdce0;
-var red-200 =         #fdaeb7;
-var red-300 =         #f97583;
-var red-400 =         #ea4a5a;
-var red-500 =         #d73a49; // Default. passes AA
-var red-600 =         #cb2431;
-var red-700 =         #b31d28;
-var red-800 =         #9e1c23;
-var red-900 =         #86181d;
+var red-000    = #ffeef0;
+var red-100    = #ffdce0;
+var red-200    = #fdaeb7;
+var red-300    = #f97583;
+var red-400    = #ea4a5a;
+var red-500    = #d73a49; // Default. passes AA
+var red-600    = #cb2431;
+var red-700    = #b31d28;
+var red-800    = #9e1c23;
+var red-900    = #86181d;
 
 // -------- Purple --------
-var purple-000 =      #f5f0ff;
-var purple-100 =      #e6dcfd;
-var purple-200 =      #d1bcf9;
-var purple-300 =      #b392f0;
-var purple-400 =      #8a63d2;
-var purple-500 =      #6f42c1; // passes AA with #fff
-var purple-600 =      #5a32a3;
-var purple-700 =      #4c2889;
-var purple-800 =      #3a1d6e;
-var purple-900 =      #29134e;
+var purple-000 = #f5f0ff;
+var purple-100 = #e6dcfd;
+var purple-200 = #d1bcf9;
+var purple-300 = #b392f0;
+var purple-400 = #8a63d2;
+var purple-500 = #6f42c1; // passes AA with #fff
+var purple-600 = #5a32a3;
+var purple-700 = #4c2889;
+var purple-800 = #3a1d6e;
+var purple-900 = #29134e;
 
-// -------- Fades --------
-// Black based on same hue as $gray-900
-var black = #1b1f23;
-var white = #ffffff;
+var black      = #1b1f23;
+var white      = #ffffff;
 
 var black-fade-15 = rgba(27, 31, 35, 0.15);
 var black-fade-30 = rgba(27, 31, 35, 0.30);
@@ -121,82 +116,65 @@ var white-fade-85 = rgba(255, 255, 255, 0.85);
 
 // hss 能自动处理 IE8 中 rgba 的透明, 当用于 background-color 时
 // -------- Color System --------
-var red =         $red-500;
-var purple =      $purple-500;
-var blue =        $blue-500;
-var green =       $green-500;//#57A957;
-var yellow =      $yellow-500;
-var orange =      $orange-500;
-var gray-dark =   $gray-900;
-var gray-light =  $gray-400;
-var gray =        $gray-500;
+var red        = $red-500;
+var purple     = $purple-500;
+var blue       = $blue-500;
+var green      = $green-500;//#57A957;
+var yellow     = $yellow-500;
+var orange     = $orange-500;
+var gray-dark  = $gray-900;
+var gray-light = $gray-300;
+var gray       = $gray-500;
 
 
-/*!
-* copy from primer-support/lib/variables/color.scss
-*/
+
+// copy from primer-support/lib/variables/color.scss
 // State indicators.
 var status-pending    = desaturate($yellow-700, 15%);
 
-// Repository type colors
-// Should be able to deprecate these in future
-var repo-private-text = $black-fade-70;
-var repo-private-bg   = $yellow-000;
-var repo-private-icon = rgba($yellow-900, 0.5);
-
-// Highlight used for things like search
-var highlight-yellow  = rgba(255, 247, 140, 0.5);
-
 // Border colors
-var border-black-fade = $black-fade-15;
 var border-blue       = $blue-500;
-var border-blue-light = $blue-200;
-var border-green      = $green-400;
-var border-green-light= desaturate($green-300, 40%);
+var border-green      = $green-500;
 var border-purple     = $purple;
 var border-red        = $red;
-var border-red-light  = desaturate($red-300, 60%);
 var border-purple     = $purple;
-var border-yellow     = desaturate($yellow-300, 60%);
-var border-gray-dark  = $gray-300;
-var border-gray-darker= $gray-700;
-var border-gray-light = lighten($gray-200, 3%);
-var border-gray       = $gray-200;
+var border-orange     = $orange-600;
+var border-orange-dark= $orange-900;
+var border-gray-dark  = $gray-700;
+var border-gray-light = $gray-300;
+var border-gray       = $gray-500;
 
 // Background colors
-var bg-blue-light =     $blue-000;
-var bg-blue =           $blue-500;
-var bg-gray-dark =      $gray-900;
-var bg-gray-light =     $gray-000;
-var bg-gray =           $gray-100;
-var bg-green =          $green-500;
-var bg-green-light =    $green-100;
-var bg-orange =         $orange-700;
-var bg-purple =         $purple-500;
-var bg-purple-light =   $purple-000;
-var bg-red =            $red-500;
-var bg-red-light =      $red-100;
-var bg-white =          $white;
-var bg-yellow =         $yellow-500;
-var bg-yellow-light =   $yellow-200;
+var bg-blue-light    = $blue-100;
+var bg-blue          = $blue-400;
+var bg-gray-dark     = $gray-800;
+var bg-gray-light    = $gray-100;
+var bg-gray          = $gray-400;
+var bg-green         = $green-400;
+var bg-green-light   = $green-100;
+var bg-orange        = $orange-400;
+var bg-orange-light  = $orange-100;
+var bg-purple        = $purple-400;
+var bg-purple-light  = $purple-100;
+var bg-red           = $red-400;
+var bg-red-light     = $red-100;
+var bg-white         = $white;
+var bg-yellow        = $yellow-400;
+var bg-yellow-light  = $yellow-100;
 
 // Text colors
-var text-blue =         $blue-500;
-var text-gray-dark =    $gray-900;
-var text-gray-light =   $gray-500;
-var text-gray =         $gray-600;
-var text-green =        $green-500;
-var text-orange =       $orange-900;
-var text-orange-light = $orange-600;
-var text-purple =       $purple;
-var text-red =          $red-600;
-var text-white =        $white;
+var text-blue        = $blue-500;
+var text-red         = $red-600;
+var text-gray-dark   = $gray-900;
+var text-gray-light  = $gray-500;
+var text-gray        = $gray-600;
+var text-green       = $green-500;
+var text-orange-dark = $orange-900;
+var text-orange      = $orange-600;
+var text-purple      = $purple;
+var text-white       = $white;
 
-
-
-/*!
-* layout
-*/
+//layout
 var spacer   =  8px;
 var spacer-1 =  4px;
 var spacer-2 =  8px;
@@ -205,30 +183,19 @@ var spacer-4 = 24px;
 var spacer-5 = 32px;
 var spacer-6 = 40px;
 
-// Fixed-width container variables
 var container-width = 980px;
 var grid-gutter =     10px;
+var neg-grid-gutter= -10px;
 
-// Breakpoint widths
 var width-xs = 0;
 var width-sm = 544px;
 var width-md = 768px;
 var width-lg = 1012px;
 var width-xl = 1280px;
 
-// Responsive container widths
 var container-md = $width-md;
 var container-lg = $width-lg;
 var container-xl = $width-xl;
-
-/*!
-* misc
-*/
-var border-width = 1px;
-var border-color = $border-gray;
-var border-style = solid;
-var border = $border-width $border-color $border-style;
-var border-radius = 3px;
 
 var h00-size-mobile= 40px;
 var h0-size-mobile = 32px;

@@ -1,65 +1,57 @@
 @import("vars");
 
-.bg-white       { background-color: $bg-white !important; }
-/* Set the background to $bg-blue */
-.bg-blue        { background-color: $bg-blue !important; }
-/* Set the background to $bg-blue-light */
-.bg-blue-light  { background-color: $bg-blue-light !important; }
-/* Set the background to $bg-gray-dark */
-.bg-gray-dark   { background-color: $bg-gray-dark !important; }
-/* Set the background to $bg-gray */
-.bg-gray        { background-color: $bg-gray !important; }
-/* Set the background to $bg-gray-light */
-.bg-gray-light  { background-color: $bg-gray-light !important; }
-/* Set the background to $bg-green */
-.bg-green       { background-color: $bg-green !important; }
-/* Set the background to $bg-green-light */
-.bg-green-light { background-color: $bg-green-light !important; }
-/* Set the background to $bg-red */
-.bg-red         { background-color: $bg-red !important; }
-/* Set the background to $bg-red-light */
-.bg-red-light   { background-color: $bg-red-light !important; }
-/* Set the background to $bg-yellow */
-.bg-yellow      { background-color: $bg-yellow !important; }
-/* Set the background to $bg-yellow-light */
-.bg-yellow-light{ background-color: $bg-yellow-light !important; }
-/* Set the background to $bg-purple */
-.bg-purple      { background-color: $bg-purple !important; }
-/* Set the background to $bg-purple-light */
-.bg-purple-light{ background-color: $bg-purple-light !important; }
+/* Add a gray border */
+.border            {border: 1px solid $border-gray-light !important;}
+.border-blue       {border-color: $border-blue        !important;}
+.border-green      {border-color: $border-green       !important;}
+.border-red        {border-color: $border-red         !important;}
+.border-purple     {border-color: $border-purple      !important;}
+.border-orange     {border-color: $border-orange      !important;}
+.border-orange-dark{border-color: $border-orange-dark !important;}
+.border-gray       {border-color: $border-gray        !important;}
+.border-gray-light {border-color: $border-gray-light  !important;}
+.border-gray-dark  {border-color: $border-gray-dark   !important;}
 
-// text colors
-/* Set the text color to $text-blue */
-.text-blue          { color: $text-blue !important; }
-/* Set the text color to $text-red */
-.text-red           { color: $text-red !important; }
-/* Set the text color to $text-gray-light */
-.text-gray-light    { color: $text-gray-light !important; }
-/* Set the text color to $text-gray */
-.text-gray          { color: $text-gray !important; }
-/* Set the text color to $text-gray-dark */
-.text-gray-dark     { color: $text-gray-dark !important; }
-/* Set the text color to $text-green */
-.text-green         { color: $text-green !important; }
-/* Set the text color to $text-orange */
-.text-orange        { color: $text-orange !important; }
-/* Set the text color to $text-orange-light */
-.text-orange-light  { color: $text-orange-light !important; }
-/* Set the text color to $text-purple */
-.text-purple        { color: $text-purple !important; }
-/* Set the text color to $text-white */
-.text-white         { color: $text-white !important; }
-/* Set the text color to inherit */
-.text-inherit       { color: inherit !important; }
+.bg-white       {background-color: $bg-white        !important;}
+.bg-blue        {background-color: $bg-blue         !important;}
+.bg-blue-light  {background-color: $bg-blue-light   !important;}
+.bg-gray-dark   {background-color: $bg-gray-dark    !important;}
+.bg-gray        {background-color: $bg-gray         !important;}
+.bg-gray-light  {background-color: $bg-gray-light   !important;}
+.bg-green       {background-color: $bg-green        !important;}
+.bg-green-light {background-color: $bg-green-light  !important;}
+.bg-orange      {background-color: $bg-orange       !important;}
+.bg-orange-light{background-color: $bg-orange-light !important;}
+.bg-red         {background-color: $bg-red          !important;}
+.bg-red-light   {background-color: $bg-red-light    !important;}
+.bg-yellow      {background-color: $bg-yellow       !important;}
+.bg-yellow-light{background-color: $bg-yellow-light !important;}
+.bg-purple      {background-color: $bg-purple       !important;}
+.bg-purple-light{background-color: $bg-purple-light !important;}
+
+.text-blue        {color: $text-blue        !important;}
+.text-red         {color: $text-red         !important;}
+.text-gray        {color: $text-gray        !important;}
+.text-gray-dark   {color: $text-gray-dark   !important;}
+.text-gray-light  {color: $text-gray-light  !important;}
+.text-green       {color: $text-green       !important;}
+.text-orange      {color: $text-orange      !important;}
+.text-orange-dark {color: $text-orange-dark !important;}
+.text-purple      {color: $text-purple      !important;}
+.text-white       {color: $text-white       !important;}
+.text-inherit     {color: inherit           !important;}
+
+.text-right  {text-align:right  !important;}
+.text-left   {text-align:left   !important;}
+.text-center {text-align:center !important;}
 
 // Text states
 // These can probably all be regular utilities
-.text-pending { color: $yellow-800 !important; }
+.text-pending {color: $yellow-800 !important;}
 // Separate text and background colors in future to improve a11y
-.bg-pending { color: $yellow-700 !important; }
+.bg-pending   {color: $yellow-700 !important;}
 
 // Link colors
-// Sets the links color to $text-gray and $text-blue on hover
 .link-gray {
   color: $text-gray !important;
 
@@ -67,8 +59,6 @@
     color: $text-blue !important;
   }
 }
-
-// Sets the links color to $text-gray-dark and $text-blue on hover
 .link-gray-dark {
   color: $text-gray-dark !important;
 
@@ -76,16 +66,11 @@
     color: $text-blue !important;
   }
 }
-
-/* Set the link color to $text-blue on hover
-  Useful when you want only part of a link to turn blue on hover */
 .link-hover-blue {
   &:hover {
     color: $text-blue !important;
   }
 }
-
-/* Make a link $text-gray, then $text-blue on hover and removes the underline */
 .muted-link {
   color: $text-gray !important;
 
@@ -103,6 +88,13 @@
   background: none;
 }
 
+.float-left { float: left; }
+.float-right{ float: right;}
+
 .clearfix {
   $clearfix;
+}
+
+.no-select {
+  user-select: none;
 }

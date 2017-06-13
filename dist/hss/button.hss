@@ -1,4 +1,4 @@
-
+@import("vars");
 var btn-bd-radius = 3px;
 .btn {
   var bgDef = $bg-gray-light;
@@ -7,7 +7,7 @@ var btn-bd-radius = 3px;
   padding: 6px 12px;
   font-size: $body-font-size;
   font-weight: $font-weight-bold;
-  font-family: "微软雅黑", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑", Helvetica, Arial, sans-serif;
   line-height: 20px; // Specifically not inherit our `<body>` default
   white-space: nowrap;
   vertical-align: middle;
@@ -15,7 +15,7 @@ var btn-bd-radius = 3px;
   user-select: none;
   border: 1px solid $gray-300;
   border-radius: $btn-bd-radius;
-  color: $gray-800;
+  color: lighten($gray-800, 3%);
   //background: linear-gradient($bg-gray-light, $gray-100);
   background-color: $bgDef;
   appearance: CSS("none"); // Corrects inability to style clickable `input` types in iOS.
@@ -31,7 +31,7 @@ var btn-bd-radius = 3px;
 
   .counter {
     display: inline-block;
-    padding: 2px 5px;
+    padding: 1.5px 5px;
     font-size: 12px;
     font-weight: bold;
     line-height: 1;
@@ -45,41 +45,45 @@ var btn-bd-radius = 3px;
     background-color: $bgDef * 0.9;
   }
 
+  &.selected,
   &:focus {
     outline: 0;
-    border-color: $blue-300;
+    border-color: lighten($blue-400, 5%);
   }
 
-  &:active,
-  &.selected {
+  &:active {
     background-color: $bgDef * 0.85;
   }
 }
 
 .btn-primary {
-  var bgDef = $green;
+  var bgDef = lighten($green, 2%);
   color: $gray-100;
+  border-color: darken($green-500, 2%);
   background-color: $bgDef;
   .counter {
     color: $bgDef;
-    background-color: $gray-100;
+    background-color: darken($gray-100, 5%);
   }
+
   &:hover {
     color: $white;
-    background-color: $bgDef * 0.9;
+    background-color: darken($bgDef, 5%);
+    .counter {
+      background-color: $gray-100;
+    }
   }
-  &:active,
-  &.selected {
-    background-color: $bgDef * 0.8;
+
+  &:active {
+    background-color: darken($bgDef, 10%);
+  }
+
+  &[disabled], &.disabled{
+    background-color: desaturate($green-300, 30%) !important;
+    color: $white; /* 实际上 IE8 中在 disabled 之后只能更改 bg, 但 FF 可以改这个 */
+    border-color: $green-200;
   }
 }
-
-
-.btn-primary[disabled], .btn-primary.disabled {
-  background-color: $green !important;
-  color: $white;
-}
-
 
 .btn-danger {
   var bgDef = $red-400;
@@ -94,14 +98,13 @@ var btn-bd-radius = 3px;
     }
   }
 
-  &:active,
-  &.selected {
+  &:active {
     background-color: $bgDef * 0.8;
   }
-}
 
-.btn-danger[disabled], .btn-danger.disabled {
-  color: $text-red;
+  &[disabled], &.disabled {
+    color: $text-red;
+  }
 }
 
 .btn-outline {
@@ -117,14 +120,13 @@ var btn-bd-radius = 3px;
     }
   }
 
-  &:active,
-  &.selected {
+  &:active {
     background-color: $bgDef * 0.8;
   }
-}
 
-.btn-outline[disabled], .btn-outline.disabled {
-  color: $text-blue;
+  &[disabled], &.disabled {
+    color: $text-blue;
+  }
 }
 
 .btn-sm {
@@ -226,7 +228,6 @@ a.social-count {
     background-color: $blue-400;
   }
 }
-
 
 
 // button group

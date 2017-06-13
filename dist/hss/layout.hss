@@ -1,0 +1,95 @@
+@import("vars");
+
+.container {    // 980px;
+  width: $container-width;
+  margin-right: auto;
+  margin-left: auto;
+  $clearfix;
+}
+
+.container-md { // 768px
+  max-width: $container-md;
+  margin-right: auto;
+  margin-left: auto;
+  $clearfix;
+}
+
+.container-lg { // 1004px
+  max-width: $container-lg;
+  margin-right: auto;
+  margin-left: auto;
+  $clearfix;
+}
+
+.container-xl { // 1280px
+  max-width: $container-xl;
+  margin-right: auto;
+  margin-left: auto;
+  $clearfix;
+}
+
+
+
+// Grid system
+.columns {
+  $clearfix;
+}
+
+// Base class for every column (requires a column width from below)
+.column {
+  float: left;
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
+}
+
+// Column widths
+.one-third {
+  width: 33.333333%;
+}
+
+.two-thirds {
+  width: 66.666667%;
+}
+
+.one-fourth {
+  width: 25%;
+}
+
+.one-half {
+  width: 50%;
+}
+
+.three-fourths {
+  width: 75%;
+}
+
+.one-fifth {
+  width: 20%;
+}
+
+.four-fifths {
+  width: 80%;
+}
+
+// Single column hack
+.single-column {
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
+}
+
+// Equal width columns via table sorcery.
+.table-column {
+  display: table-cell;
+  width: 1%;
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
+  vertical-align: top;
+}
+
+// Centers content horizontally. Can be used inside or outside the grid.
+.centered {
+  display: block;
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}

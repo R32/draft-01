@@ -13,15 +13,24 @@
             height:  3em;
         }
 
+        .example-column .column {
+            padding: 10px;
+            background-color: #e7f6e0;
+            border: 1px solid #c8eab9;
+        }
 
+        div.text-color-example p{
+            border-width: 1px;
+            border-style: solid;
+            text-indent: 1em;
+        }
     </style>
 </head>
 <body>
-  <div>
+  <div class="container">
 
     <div>
-      <label>some message</label> <br />
-      <input type="text" value="text input" /> <br />
+      <h3>Buttons</h3>
       <input type="button" value="default" class="btn" />
       <button class="btn" onclick="return false">默认<span class="counter">11</span></button>
       <input type="button" value="small" class="btn btn-sm"  />
@@ -76,46 +85,80 @@
           <button class="btn btn-sm" type="button">Button</button>
         </div>
       </div>
-
-      <textarea></textarea>
     </div>
 
-    <!-- header -->
+    <hr />
+    <h3>Layout grid</h3>
+    <div class="example-column">
+      <div class="columns">
+        <div class="one-fifth column">
+          .one-fifth
+        </div>
+        <div class="four-fifths column">
+          .four-fifths
+        </div>
+      </div>
 
-    <div class="">
-      <a href="#">这是一个链接的样式</a>
-      <hr />
-      <p class="text-red"> 忧郁奔向冷的天 撞落每滴小雨点</p>
-      <p class="text-orange"> 张开口似救生圈 实现雨的酸与甜</p>
-      <p class="text-yellow"> 搓起心爱的香烟 弄着脚底的软垫</p>
-      <p class="text-green"> 酒醉与心醉沟起污染一片 无心睡眠 脑交战 </p>
-      <p class="text-blue"> 踏着旧日怀念昨天的你 夜是渗着前事全挥不去 </p>
-      <p class="text-teal"> 若是你在明日能得一见 就让我在怀内重得温暖 </p>
-      <p class="text-pink"> 忧郁奔向冷的天 活在我的心里边 </p>
-    <p class="text-purple">始终只有你方可 令逝去的心再甜</p>
+      <div class="columns">
+        <div class="one-fourth column">
+          .one-fourth
+        </div>
+        <div class="three-fourths column">
+          .three-fourths
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="one-third column">
+          .one-third
+        </div>
+        <div class="two-thirds column">
+          .two-thirds
+        </div>
+      </div>
+
+  <div class="columns">
+    <div class="one-half column">
+      .one-half
     </div>
+    <div class="one-half column">
+      .one-half
+    </div>
+  </div>
+  <p>Columns can be <a>centered</a> by adding <code class="highlighter-rouge">.centered</code> to the <code class="highlighter-rouge">.column</code> class.</p>
+  <div class="clearfix">
+    <div class="columns">
+      <div class="one-half column centered">
+        .one-half
+      </div>
+    </div>
+  </div>
+</div>
 
-    <div class="hd-groups">
-      <b>header 1~6</b>
-      <h1>H1</h1>
-      <h2>H2</h2>
-      <h3>H3</h3>
-      <h4>H4</h4>
-      <h5>H5</h5>
-      <h6>H6</h6>
+    <hr />
+    <h3>text-color border-color</h3>
+    <div class="text-color-example">
+      <p class="text-blue border-blue"> 忧郁奔向冷的天 撞落每滴小雨点</p>
+      <p class="text-red border-red"> 张开口似救生圈 实现雨的酸与甜</p>
+      <p class="text-gray-light border-gray-light"> 搓起心爱的香烟 弄着脚底的软垫</p>
+      <p class="text-gray border-gray"> 酒醉与心醉沟起污染一片 无心睡眠 脑交战 </p>
+      <p class="text-gray-dark border-gray-dark"> 踏着旧日怀念昨天的你 夜是渗着前事全挥不去 </p>
+      <p class="text-green border-green"> 若是你在明日能得一见 就让我在怀内重得温暖 </p>
+      <p class="text-orange border-orange"> 忧郁奔向冷的天 活在我的心里边 </p>
+      <p class="text-orange-dark border-orange-dark">始终只有你方可 令逝去的心再甜</p>
+      <p class="text-purple border-purple">踏着旧日怀念昨天的你 夜是渗着前事全挥不去</p>
+      <p class="">若是你在明日能得一见 就让我在怀内重得温暖</p>
     </div>
 
     <!-- background-color -->
-
+    <hr />
+    <h3>backgrond color</h3>
     <div class="bg-groups">
-      <div class="bg-white">white</div>
-
       <div class="bg-red">red</div>
       <div class="bg-red-light">red-light</div>
 
       <div class="bg-orange">orange</div>
-      <div class="bg-orange">orange</div>
-
+      <div class="bg-orange-light">orange-light</div>
 
       <div class="bg-yellow">yellow</div>
       <div class="bg-yellow-light">yellow-light</div>
@@ -137,6 +180,31 @@
       <div class="bg-gray">gray</div>
       <div class="bg-gray-light">gray-light</div>
     </div>
+
+    <hr />
+    <h3>Forms</h3>
+    <div class="forms-example" style="width: 300px">
+
+      <div class="clearfix">
+      <label for="name" class="float-left">Name</label>
+      <input class="form-control float-right" type="text" name="name" />
+      </div>
+
+      <div class="clearfix">
+      <label for="email" class="float-left">Email address</label>
+      <input class="form-control float-right"type="email" name="email">
+      </div>
+
+      <div class="clearfix">
+        <label><input type="checkbox" /> Remember me</label>
+        <label><input type="radio" name="herpderp" checked /> Herp </label>
+        <label><input type="radio" name="herpderp" /> Derp </label>
+        <button class="btn float-right" type="submit">Submit</button>
+      </div>
+    </div>
+
+    <div class="padding" style="height: 300px"></div>
+    <hr />
   </div>
 </body>
 </html>
