@@ -1,8 +1,5 @@
-@import("hss/vars");
-@import("hss/reset");
-@import("hss/layout");
-@import("hss/button");
-@import("hss/forms");
+@import("primer");
+@import("comp");
 
 var hdHeight = 20px;
 #header {
@@ -30,7 +27,3 @@ var hdHeight = 20px;
 	text-align: left;
 }
 
-
-@import("hss/comp");
-@import("hss/misc");
-@import("hss/markdown");
