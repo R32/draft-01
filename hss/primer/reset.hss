@@ -23,7 +23,7 @@ summary { display: CSS("list-item"); }
 audio, canvas, progress, video, output { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 progress { vertical-align: baseline;}
-template, [hidden] { display: none !important;}
+template, [hidden], .hidden { display: none !important;}
 svg:not(:root) { overflow: hidden; }
 figure {margin: 1em 40px;}
 
@@ -227,6 +227,7 @@ progress {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
   margin-bottom: $font16 * 0.5;
   font-family: inherit;
   font-weight: 500;
@@ -257,8 +258,8 @@ small, .small {
 }
 
 mark, .mark {
-  padding: 0.2em;
-  background-color: #fcf8e3;
+  padding: 0 0.2em;
+  background-color: $yellow-200;
 }
 
 .octicon {

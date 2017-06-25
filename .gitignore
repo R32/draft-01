@@ -3,3 +3,4 @@ dist/style.css
 dist/app.js
 dist/libs/css/*.*
 dist/libs/js/*.*
+hss/primer/*.css

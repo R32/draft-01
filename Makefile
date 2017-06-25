@@ -19,8 +19,7 @@ css: dist/style.css
 clean:
 	rm -rf dist/style.css
 
-
-
+#monitor hss change on DOS> chokidar hss/*.hss hss/primer/*.hss -c "hss hss/style.hss -output dist/"
 dist/style.css: hss/style.hss hss/primer.hss hss/comp.hss
 	hss $< -output dist/
 
