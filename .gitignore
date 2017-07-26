@@ -4,3 +4,5 @@ dist/app.js
 dist/libs/css/*.*
 dist/libs/js/*.*
 hss/primer/*.css
+polyfill/*.js
+!polyfill/classList.js

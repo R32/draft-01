@@ -1,4 +1,6 @@
-// classList: Source: https://gist.github.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca
+/*!
+  classList: Source: https://gist.github.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca
+*/
 ;(function() {
     var regExp = function(name) {
         return new RegExp('(^| )'+ name +'( |$)');
