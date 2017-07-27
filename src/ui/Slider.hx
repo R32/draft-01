@@ -39,17 +39,18 @@ class Slider {
 		update(max, true);
 	}
 
-	function update(v: Int, savep: Bool) {
+	function update(v: Int, isEnd: Bool) {
 		var p = Ut.f2i(v * per());
-		this.thumb.style.left = p + "px";
-		this.rail.style.width = p + "px";
-		this.value = v;
-		if (savep) pos = p;
-		onChange(this.value);
+		if (value != v) {
+			this.thumb.style.left = p + "px";
+			this.rail.style.width = p + "px";
+			this.value = v;
+		}
+		if (isEnd) pos = p;
+		onChange(v, isEnd);
 	}
 
-	public dynamic function onChange(v: Int): Void {
-	}
+	public dynamic function onChange(v: Int, b: Bool): Void {}
 
 	public function destory() {
 		rail = null;
@@ -57,16 +58,6 @@ class Slider {
 		thumb = null;
 		node.onclick = null;
 		node = null;
-	}
-
-	function onMov(x) {
-		var v = Ut.iclamp(Ut.f2i((pos + x) / per()), min, max);
-		if (v != value) update(v, false);
-	}
-
-	function onEnd(x) {
-		var v = Ut.iclamp(Ut.f2i((pos + x) / per()), min, max);
-		update(v, true);
 	}
 
 	function onThumbDown(e: MouseEvent) {
@@ -77,10 +68,9 @@ class Slider {
 	}
 
 	function onDragging(x: Int, y: Int, isEnd: Bool) {
-		if (isEnd)
-			onEnd(x);
-		else
-			onMov(x);
+		var v = Ut.iclamp(Ut.f2i((pos + x) / per()), min, max);
+		if (isEnd == false && v == value) return;
+		update(v, isEnd);
 	}
 
 	function onClick(e: MouseEvent) {
