@@ -1,0 +1,30 @@
+/*
+<!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="ie8.css">
+<![endif]-->
+*/
+
+@import("primer/vars");
+
+// --- forms.hss ---
+.form-control,
+.form-select {
+  min-height: 20px;
+  background-position: 95% center;    // TODO: for IE8, width: 80  ~ 300
+}
+.form-select {
+  padding-top: 5px;
+  padding-bottom: 5px;  
+}
+.input-sm, .select-sm {
+  padding-top: 3px;
+  padding-bottom: 3px;    
+  min-height: 20px;                   // have no idea..
+}
+
+// from-group 
+.form-group {
+  &.loading * {
+    opacity: 0.5;
+  }
+}

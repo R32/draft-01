@@ -7,18 +7,18 @@ var btn-bd-radius = 3px;
   padding: 6px 12px;
   font-size: $body-font-size;
   font-weight: $font-weight-bold;
-  font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+  font-family: $label-font;
   line-height: 20px; // Specifically not inherit our `<body>` default
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  border: 1px solid $gray-300;
+  border: 1px solid $border-gray-dark;
   border-radius: $btn-bd-radius;
   color: lighten($gray-800, 3%);
   //background: linear-gradient($bg-gray-light, $gray-100);
   background-color: $bgDef;
-  appearance: CSS("none"); // Corrects inability to style clickable `input` types in iOS.
+  appearance: none; // Corrects inability to style clickable `input` types in iOS.
   i {
     font-style: normal;
     font-weight: normal;
@@ -133,6 +133,11 @@ var btn-bd-radius = 3px;
   padding: 3px 10px;
   font-size: $font-size-small;
   line-height: 20px;
+}
+
+.btn-lg {
+  padding: 0.75em 1.25em;
+  font-size: inherit;
 }
 
 .btn-block {

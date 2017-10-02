@@ -134,15 +134,26 @@ var status-pending    = desaturate($yellow-700, 15%);
 
 // Border colors
 var border-blue       = $blue-500;
+var border-blue-light = $blue-200;
+
 var border-green      = $green-500;
+var border-green-light= desaturate($green-300, 40%);
+
 var border-purple     = $purple;
+
 var border-red        = $red;
+var border-red-light  = desaturate($red-300, 60%);
+
 var border-purple     = $purple;
 var border-orange     = $orange-600;
 var border-orange-dark= $orange-900;
-var border-gray-dark  = $gray-700;
-var border-gray-light = $gray-300;
-var border-gray       = $gray-500;
+
+var border-yellow     = desaturate($yellow-300, 60%);
+
+var border-gray-dark  = $gray-300;
+var border-gray-darker= $gray-700;
+var border-gray-light = lighten($gray-200, 3%);
+var border-gray       = $gray-200;
 
 // Background colors
 var bg-blue-light    = $blue-100;
@@ -231,7 +242,9 @@ var body-font = -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
 
 // Monospace font stack
 var mono-font = "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-
+var label-font  = "微软雅黑", Helvetica, Arial, sans-serif;
 // The base body size
 var body-font-size = $font14;
 var body-line-height = $lh-default;
+
+var no-border-radius = 0;

@@ -3,7 +3,6 @@
 -main App
 -D analyzer-optimize
 -D js-es=3
--lib fraw
 #-D dump=pretty
 --connect 6000
 -js dist/app.js

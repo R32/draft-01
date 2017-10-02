@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>test</title>
     <link rel="stylesheet" type="text/css" href="../../../dist/style.css" />
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="../../../dist/ie8.css">
+    <![endif]-->
     <style type="text/css">
         div.bg-groups div {
             height:  3em;
@@ -179,28 +182,161 @@
     </div>
 
     <hr />
-    <h3>Forms</h3>
-    <div class="forms-example" style="width: 300px">
 
-      <div class="clearfix">
-      <label for="name" class="float-left">Name</label>
-      <input class="form-control float-right" type="text" name="name" />
-      </div>
+    <p>All our inputs and buttons side-by-side for easy testing of sizing and alignment with one another.</p>
+    <p>
+      <button class="btn" type="button">Button</button>
+      <button class="btn select-menu-button" type="button" aria-expanded="false" aria-haspopup="true">
+        Select menu
+      </button>
+      <input class="form-control" type="text" placeholder="Standard input" aria-label="Repository description">
+      <input class="form-control input-monospace" type="text" placeholder="Monospace input" aria-label="SHA">
+      <select class="form-select" aria-label="Important decision">
+        <option>Select</option>
+        <option value="option 2">Option 2</option>
+      </select>
+    </p>
 
-      <div class="clearfix">
-      <label for="email" class="float-left">Email address</label>
-      <input class="form-control float-right"type="email" name="email">
-      </div>
+    <p>
+      <button class="btn btn-sm" type="button">Small button</button>
+      <button class="btn btn-sm select-menu-button" type="button" aria-expanded="false" aria-haspopup="true">
+        Select menu
+      </button>
+      <input class="form-control input-sm" type="text" placeholder="Small input" aria-label="Repository description">
+      <select class="form-select select-sm" aria-label="Important decision">
+        <option>Select</option>
+        <option value="option 1">Option 1</option>
+      </select>
+    </p>
+    <h3>Forms no basic layout specified</h3>
+    <form>
+      <label for="name">Name</label>
+      <input class="form-control" type="text" id="name">
 
-      <div class="clearfix">
-        <label><input type="checkbox" /> Remember me</label>
-        <label><input type="radio" name="herpderp" checked /> Herp </label>
-        <label><input type="radio" name="herpderp" /> Derp </label>
-        <button class="btn float-right" type="submit">Submit</button>
+      <label for="email">Email address</label>
+      <input class="form-control" type="email" id="email">
+
+      <label>
+        <input type="checkbox"> Remember me
+      </label>
+
+      <label>
+        <input type="radio" id="herp" name="herpderp" checked> Herp
+      </label>
+      <label>
+        <input type="radio" id="derp" name="herpderp"> Derp
+      </label>
+
+      <button class="btn" type="submit">Submit</button>
+    </form>
+    <hr />
+    <h3>Forms contrast</h3>
+    <form>
+      <input class="form-control input-sm" type="text" style="background-image: url('bomb.png')" placeholder="Default input">
+      <br />
+      <input class="form-control input-contrast input-lg" type="text" placeholder="Input with contrast">
+      <input class="form-control input-block" type="text" placeholder="Full-width input">
+    </form>
+    <h3>Checkboxes and radios</h3>
+    <form>
+      <div class="form-checkbox">
+        <label>
+          <input type="checkbox" checked="checked" aria-describedby="help-text-for-checkbox">
+          Available for hire
+        </label>
+        <p class="note" id="help-text-for-checkbox">
+          This will do insanely <strong>awesome</strong> and <strong>amazing</strong> things!
+        </p>
       </div>
+    </form>
+    <p>You may also add emphasis to the label</p>
+    <form>
+      <div class="form-checkbox">
+        <label>
+          <input type="checkbox" checked="checked">
+          <em class="highlight">Available for hire</em>
+        </label>
+      </div>
+    </form>
+
+    <!-- <h3>Show / hide content based on a checkbox or radio button state</h3>
+    <form>
+      <div class="form-checkbox">
+        <label>
+          <input type="radio" name="hireme">
+          Not available for hire
+        </label>
+      </div>
+      <div class="form-checkbox">
+        <label aria-live="polite">
+          <input type="radio" class="form-checkbox-details-trigger" name="hireme" />
+          Available for hire
+          <span class="form-checkbox-details text-normal">
+            <span class="d-block mb-1">Available hours per week</span>
+            <input type="text" name="" class="form-control input-contrast input-sm" size="3">
+            <span class="text-small text-gray pl-2">hours per week</span>
+          </span>
+        </label>
+      </div>
+    </form> -->
+
+    <h3>Form actions</h3>
+    <form>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Save changes</button>
+      <button type="button" class="btn">Cancel</button>
     </div>
+  </form>
 
-    <div class="padding" style="height: 300px"></div>
+    <h3>Form groups</h3>
+    <form>
+      <dl class="form-group">
+        <dt><label for="example-text">Example Text</label></dt>
+        <dd><input class="form-control" type="text" value="Example Value" id="example-text"></dd>
+      </dl>
+
+      <dl class="form-group">
+        <dt><label for="example-select">Example Select</label></dt>
+        <dd>
+          <select class="form-select" id="example-select">
+            <option>Choose an option</option>
+            <option>Git</option>
+            <option>Subversion</option>
+            <option>Social Coding</option>
+            <option>Beets</option>
+            <option>Bears</option>
+            <option>Battlestar Galactica</option>
+          </select>
+        </dd>
+      </dl>
+
+      <dl class="form-group">
+        <dt><label for="example-textarea">Example Textarea</label></dt>
+        <dd>
+          <textarea class="form-control" id="example-textarea"></textarea>
+        </dd>
+      </dl>
+    </form>
+
+
+    <h3>Form group validation</h3>
+    <form>
+      <dl class="form-group errored">
+        <dt><label for="example-text-errored">Example Text</label></dt>
+        <dd><input class="form-control" type="text" value="Example Value" id="example-text-errored" aria-describedby="form-error-text"></dd>
+        <dd class="error" id="form-error-text">This example input has an error.</dd>
+      </dl>
+      <br>
+      <dl class="form-group warn">
+        <dt><label for="example-text-warn">Example Text</label></dt>
+        <dd><input class="form-control" type="text" value="Example Value" id="example-text-warn" aria-describedby="form-warning-text"></dd>
+        <dd class="warning" id="form-warning-text">This example input has a warning.</dd>
+      </dl>
+    </form>
+
+    <h3 style="margin-top: 2em">xx</h3>
+    <div class="note">aaaaaaaaaaaaaaaaaa</div>
+    <div class="padding" style="height: 200px"></div>
     <hr />
   </div>
 </body>

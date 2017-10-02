@@ -28,7 +28,7 @@ endif
 #########
 all: css
 
-css: dist/style.css
+css: dist/style.css dist/ie8.css
 
 polyfill: dist/libs/js/polyfill.js
 
@@ -37,8 +37,11 @@ clean:
 
 .PHONY: clean
 
-# monitor hss change on DOS> chokidar hss/*.hss hss/primer/*.hss -c "hss hss/style.hss -output dist/"
+# monitor hss change on    DOS> chokidar hss/*.hss hss/primer/*.hss -c "hss hss/style.hss hss/ie8.hss -output dist/"
 dist/style.css: hss/style.hss hss/primer.hss hss/comp.hss
+	hss $< -output dist/
+
+dist/ie8.css: hss/ie8.hss hss/primer/vars.hss
 	hss $< -output dist/
 
 hss/primer.hss: $(foreach dir,hss/primer, $(wildcard $(dir)/*.hss))
