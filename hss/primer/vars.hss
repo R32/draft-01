@@ -133,6 +133,7 @@ var gray       = $gray-500;
 var status-pending    = desaturate($yellow-700, 15%);
 
 // Border colors
+// var border-black-fade = $black-fade-15;  IE8
 var border-blue       = $blue-500;
 var border-blue-light = $blue-200;
 
@@ -189,7 +190,7 @@ var text-white       = $white;
 var spacer   =  8px;
 var spacer-1 =  4px;
 var spacer-2 =  8px;
-var spacer-3 = 12px;
+var spacer-3 = 12px; var neg-spacer-3 = -12px;
 var spacer-4 = 24px;
 var spacer-5 = 32px;
 var spacer-6 = 40px;
