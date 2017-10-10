@@ -17,3 +17,7 @@ hss 代码主要参照了 [primer-css](https://github.com/primer/primer-css)
 * [x] markdown
 * [x] button
 
+
+### Note
+
+对于 Tooltip 在 IE8 中, 如果想要背影透明(``)，则没有三角符,
