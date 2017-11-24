@@ -1,4 +1,4 @@
-@import("vars");
+@import("vars")
 
 .flash {
     position: relative;
@@ -6,7 +6,7 @@
     color: $blue-800;
     background-color: $blue-100;
     border: 1px solid $border-blue-light;
-    border-radius: 3px;
+    border-radius: $border-radius;
 
     p:last-child {
       margin-bottom: 0;
@@ -22,7 +22,7 @@
 .flash-close {
     float: right;
     padding: $spacer-3;
-    margin:  $neg-spacer-3;
+    margin:  0 - $spacer-3;
     color: inherit;
     text-align: center;
     cursor: pointer;

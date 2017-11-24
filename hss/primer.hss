@@ -1,8 +1,8 @@
-@import("primer/vars");
-@import("primer/reset");
-@import("primer/layout");
-@import("primer/button");
-@import("primer/forms");
-@import("primer/alter");
-@import("primer/markdown");
-@import("primer/misc");
+@import("primer/vars")
+@import("primer/reset")
+@import("primer/layout")
+@import("primer/button")
+@import("primer/forms")
+@import("primer/alter")
+@import("primer/markdown")
+@import("primer/misc")

@@ -80,14 +80,6 @@
   }
 }
 
-[disabled], [disabled]:link, [disabled]:visited, [disabled]:focus, [disabled]:hover, [disabled]:active,
-.disabled, .disabled:link, .disabled:visited, .disabled:focus, .disabled:hover, .disabled:active {
-  cursor: auto;
-  opacity: 0.5;
-  font-weight: normal;
-  background: none;
-}
-
 .float-left { float: left; }
 .float-right{ float: right;}
 

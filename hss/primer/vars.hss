@@ -190,14 +190,13 @@ var text-white       = $white;
 var spacer   =  8px;
 var spacer-1 =  4px;
 var spacer-2 =  8px;
-var spacer-3 = 12px; var neg-spacer-3 = -12px;
+var spacer-3 = 12px;
 var spacer-4 = 24px;
 var spacer-5 = 32px;
 var spacer-6 = 40px;
 
 var container-width = 980px;
 var grid-gutter =     10px;
-var neg-grid-gutter= -10px;
 
 var width-xs = 0;
 var width-sm = 544px;
@@ -248,4 +247,4 @@ var label-font  = "微软雅黑", Helvetica, Arial, sans-serif;
 var body-font-size = $font14;
 var body-line-height = $lh-default;
 
-var no-border-radius = 0;
+var border-radius = 3px; // 0 or 3px

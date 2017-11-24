@@ -4,7 +4,11 @@
 <![endif]-->
 */
 
-@import("primer/vars");
+@import("primer/vars")
+// button
+.btn[disabled] {
+  filter: CSS("none");
+}
 
 // --- forms.hss ---
 .form-control,
@@ -14,15 +18,15 @@
 }
 .form-select {
   padding-top: 5px;
-  padding-bottom: 5px;  
+  padding-bottom: 5px;
 }
 .input-sm, .select-sm {
   padding-top: 3px;
-  padding-bottom: 3px;    
+  padding-bottom: 3px;
   min-height: 20px;                   // have no idea..
 }
 
-// from-group 
+// from-group
 .form-group {
   &.loading * {
     opacity: 0.5;
