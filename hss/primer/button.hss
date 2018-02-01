@@ -13,7 +13,7 @@
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  border: 1px solid $border-gray-dark;
+  border: 1px solid $border-gray;
   border-radius: $border-radius;
   color: lighten($gray-800, 3%);
   //background: linear-gradient($bg-gray-light, $gray-100);
@@ -37,13 +37,17 @@
     font-weight: bold;
     line-height: 10px;
     color: $text-gray-light;
-    background-color: $bgDef * 0.95;
+    background-color: darken($bgDef, 5%);
     border-radius: 6 * $border-radius;  // if
   }
 
   &:hover {
     text-decoration: none;
-    background-color: $bgDef * 0.9;
+    background-color: darken($bgDef, 3%);
+    border-color: $border-gray-dark;
+    &[disabled], &.disabled {
+      border-color: $border-gray;
+    }
   }
 
   &.selected,
@@ -64,9 +68,9 @@
 }
 
 .btn-primary {
-  var bgDef = lighten($green, 2%);
+  var bgDef = $green;
   color: $gray-100;
-  border-color: darken($green-500, 2%);
+  border-color: darken($bgDef, 5%);
   background-color: $bgDef;
   .counter {
     color: $bgDef;
@@ -76,8 +80,12 @@
   &:hover {
     color: $white;
     background-color: darken($bgDef, 5%);
+    border-color: darken($bgDef, 10%);
     .counter {
       background-color: $gray-100;
+    }
+    &[disabled], &.disabled {
+      border-color: $border-green-light;
     }
   }
 
@@ -85,24 +93,29 @@
     background-color: darken($bgDef, 10%);
   }
 
-  &[disabled], &.disabled{
+  &.selected,
+  &:focus {
+    border-color: darken($blue-400, 5%);
+  }
+  &[disabled], &.disabled {
     background-color: desaturate($green-300, 30%) !important;
     color: $white; /* 实际上 IE8 中在 disabled 之后只能更改 bg, 但 FF 可以改这个 */
-    border-color: $green-200;
+    border-color: $border-green-light;
   }
 }
 
 .btn-danger {
   var bgDef = $red-400;
   color: $text-red;
-
   &:hover {
     color: $white;
     background-color: $bgDef;
+    border-color: $border-red;
     .counter {
       color: $bgDef;
       background-color: $white;
     }
+
   }
 
   &:active {
@@ -174,7 +187,7 @@ a.btn-with-count {
   }
 }
 a.social-count {
-  var bgDef = $bg-gray-light;
+  var bgDef = darken($gray-100, 2%);
   float: left;
   padding: 3px 7px;
   font-size: $font-size-small;

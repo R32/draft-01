@@ -35,8 +35,8 @@
 .text-gray-dark   {color: $text-gray-dark   !important;}
 .text-gray-light  {color: $text-gray-light  !important;}
 .text-green       {color: $text-green       !important;}
+.text-orange-light{color: $text-orange-light!important;}
 .text-orange      {color: $text-orange      !important;}
-.text-orange-dark {color: $text-orange-dark !important;}
 .text-purple      {color: $text-purple      !important;}
 .text-white       {color: $text-white       !important;}
 .text-inherit     {color: inherit           !important;}

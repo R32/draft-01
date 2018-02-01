@@ -102,28 +102,28 @@ var purple-900 = #29134e;
 var black      = #1b1f23;
 var white      = #ffffff;
 
-var black-fade-15 = rgba(27, 31, 35, 0.15);
-var black-fade-30 = rgba(27, 31, 35, 0.30);
-var black-fade-50 = rgba(27, 31, 35, 0.50);
-var black-fade-70 = rgba(27, 31, 35, 0.70);
-var black-fade-85 = rgba(27, 31, 35, 0.85);
+var black-fade-15 = rgba($black, 0.15);
+var black-fade-30 = rgba($black, 0.30);
+var black-fade-50 = rgba($black, 0.50);
+var black-fade-70 = rgba($black, 0.70);
+var black-fade-85 = rgba($black, 0.85);
 
-var white-fade-15 = rgba(255, 255, 255, 0.15);
-var white-fade-30 = rgba(255, 255, 255, 0.30);
-var white-fade-50 = rgba(255, 255, 255, 0.50);
-var white-fade-70 = rgba(255, 255, 255, 0.70);
-var white-fade-85 = rgba(255, 255, 255, 0.85);
+var white-fade-15 = rgba($white, 0.15);
+var white-fade-30 = rgba($white, 0.30);
+var white-fade-50 = rgba($white, 0.50);
+var white-fade-70 = rgba($white, 0.70);
+var white-fade-85 = rgba($white, 0.85);
 
 // hss 能自动处理 IE8 中 rgba 的透明, 当用于 background-color 时
 // -------- Color System --------
 var red        = $red-500;
 var purple     = $purple-500;
 var blue       = $blue-500;
-var green      = $green-500;//#57A957;
+var green      = $green-500;
 var yellow     = $yellow-500;
 var orange     = $orange-500;
 var gray-dark  = $gray-900;
-var gray-light = $gray-300;
+var gray-light = $gray-400;
 var gray       = $gray-500;
 
 
@@ -151,39 +151,39 @@ var border-orange-dark= $orange-900;
 
 var border-yellow     = desaturate($yellow-300, 60%);
 
-var border-gray-dark  = $gray-300;
 var border-gray-darker= $gray-700;
 var border-gray-light = lighten($gray-200, 3%);
-var border-gray       = $gray-200;
+var border-gray       = darken($gray-300, 5%);
+var border-gray-dark  = $gray-400;
 
 // Background colors
-var bg-blue-light    = $blue-100;
-var bg-blue          = $blue-400;
+var bg-blue-light    = $blue-200;
+var bg-blue          = $blue-500;
 var bg-gray-dark     = $gray-800;
-var bg-gray-light    = $gray-100;
-var bg-gray          = $gray-400;
-var bg-green         = $green-400;
-var bg-green-light   = $green-100;
-var bg-orange        = $orange-400;
-var bg-orange-light  = $orange-100;
-var bg-purple        = $purple-400;
-var bg-purple-light  = $purple-100;
-var bg-red           = $red-400;
-var bg-red-light     = $red-100;
+var bg-gray-light    = darken($gray-100, 1%);
+var bg-gray          = $gray-500;
+var bg-green         = $green-500;
+var bg-green-light   = $green-200;
+var bg-orange        = $orange-700;
+var bg-orange-light  = $orange-200;
+var bg-purple        = $purple-500;
+var bg-purple-light  = $purple-200;
+var bg-red           = $red-500;
+var bg-red-light     = $red-200;
 var bg-white         = $white;
-var bg-yellow        = $yellow-400;
-var bg-yellow-light  = $yellow-100;
+var bg-yellow        = $yellow-500;
+var bg-yellow-light  = $yellow-200;
 
 // Text colors
 var text-blue        = $blue-500;
-var text-red         = $red-600;
 var text-gray-dark   = $gray-900;
-var text-gray-light  = $gray-500;
+var text-gray-light  = darken($gray-300, 5%);
 var text-gray        = $gray-600;
 var text-green       = $green-500;
-var text-orange-dark = $orange-900;
-var text-orange      = $orange-600;
+var text-orange      = $orange-900;
+var text-orange-light= $orange-600;
 var text-purple      = $purple;
+var text-red         = $red-600;
 var text-white       = $white;
 
 //layout

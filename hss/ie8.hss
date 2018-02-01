@@ -23,7 +23,7 @@
 .input-sm, .select-sm {
   padding-top: 3px;
   padding-bottom: 3px;
-  min-height: 20px;                   // have no idea..
+  min-height: 20px;                   // no idea..
 }
 
 // from-group

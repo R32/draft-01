@@ -4,7 +4,7 @@
 //var btn-input-focus-shadow = 0 0 0 0.2em rgba($blue, 0.3);
 
 CSS("::placeholder") {
-  color: $gray-300;
+  color: $text-gray-light;
 }
 
 label {
@@ -23,17 +23,22 @@ label {
   line-height: 20px;
   color: $text-gray-dark;
   vertical-align: middle;
-  background-color: transparent;
+  background-color: $bg-gray-light;
   background-repeat: no-repeat;                 // Repeat and position set for form states (success, error, etc)
   background-position: CSS("right 8px center"); // For form validation. This keeps images 8px from right and centered vertically.
-  border: 1px solid $border-gray-dark;
+  border: 1px solid $border-gray;
   border-radius: $border-radius;
   outline: none;
+
+  &:hover {
+    border-color: $border-gray-dark;
+  }
 
   &.focus,
   &:focus {
     border-color: $blue-400;
     outline: none;
+    background-color: transparent;
   }
 }
 
@@ -164,17 +169,20 @@ label {
   // IE9 hacks to reduce padding
   padding-right: $spacer-4;
   padding-right: CSS("8px\\9");
-  background: CSS('#fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") no-repeat right 8px center');
+  // $bg-gray-light: darken($gray-100, 1%) => #F3F5F8
+  background: CSS('#F3F5F8 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") no-repeat right 8px center');
   // IE9 hacks to hide the background-image
   background-image: CSS("none\\9");
   background-repeat: no-repeat;
   background-size: 8px 10px;
 
   // Hides the default caret in IE11
+  &:hover {
+    border-color: $border-gray-dark;
+  }
   &::-ms-expand {
     display: none;
   }
-
   &[multiple] {
     height: auto;
   }
@@ -201,16 +209,8 @@ label {
     width: 440px;
     max-width: 100%;
     margin-right: 5px;
-    background-color: $bg-gray-light;
-
-    &:focus {
-      background-color: $bg-white;
-    }
-
     &.shorter { width: 130px; }
-
     &.short { width: 250px; }
-
     &.long { width: 100%; }
   }
 
