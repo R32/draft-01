@@ -1,4 +1,4 @@
-@import("vars");
+@import("vars")
 
 /* Add a gray border */
 .border            {border: 1px solid $border-gray-light !important;}
@@ -89,4 +89,33 @@
 
 .no-select {
   user-select: none;
+}
+
+.box-shadow {
+  box-shadow: $box-shadow !important;
+}
+
+.box-shadow-medium {
+  box-shadow: $box-shadow-medium !important;
+}
+
+.box-shadow-large {
+  box-shadow: $box-shadow-large !important;
+}
+
+.box-shadow-extra-large {
+  box-shadow: $box-shadow-extra-large !important;
+}
+
+// Turn off box shadow
+.box-shadow-none {
+  box-shadow: none !important;
+}
+
+// margin & padding
+.p-2 {
+  padding: $spacer-2 !important;
+}
+.p-4 {
+  padding: $spacer-4 !important;
 }

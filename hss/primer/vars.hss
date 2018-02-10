@@ -160,8 +160,8 @@ var border-gray-dark  = $gray-400;
 var bg-blue-light    = $blue-200;
 var bg-blue          = $blue-500;
 var bg-gray-dark     = $gray-800;
-var bg-gray-light    = darken($gray-100, 1%);
-var bg-gray          = $gray-500;
+var bg-gray-light    = $gray-000;
+var bg-gray          = $gray-100;
 var bg-green         = $green-500;
 var bg-green-light   = $green-200;
 var bg-orange        = $orange-700;
@@ -190,10 +190,17 @@ var text-white       = $white;
 var spacer   =  8px;
 var spacer-1 =  4px;
 var spacer-2 =  8px;
-var spacer-3 = 12px;
+var spacer-3 = 16px;
 var spacer-4 = 24px;
 var spacer-5 = 32px;
 var spacer-6 = 40px;
+
+var em-spacer-1 = 0.0625em; // 1/16
+var em-spacer-2 = 0.125em;  // 1/8
+var em-spacer-3 = 0.25em;   // 1/4
+var em-spacer-4 = 0.375em;  // 3/8
+var em-spacer-5 = 0.5em;    // 1/2
+var em-spacer-6 = 0.75em;   // 3/4
 
 var container-width = 980px;
 var grid-gutter =     10px;
@@ -248,3 +255,13 @@ var body-font-size = $font14;
 var body-line-height = $lh-default;
 
 var border-radius = 3px; // 0 or 3px
+var border-width = 1px;
+var border-color =$border-gray;
+var border-style = solid;
+var border = $border-width $border-color $border-style;
+
+// works on IE9+
+var box-shadow = 0 1px 1px rgba($black, 0.1);
+var box-shadow-medium = 0 1px 5px $black-fade-15;
+var box-shadow-large = 0 1px 15px $black-fade-15;
+var box-shadow-extra-large = 0 10px 50px rgba($black, 0.07);

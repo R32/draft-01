@@ -1,7 +1,7 @@
 @import("vars")
 
 .btn {
-  var bgDef = $bg-gray-light;
+  var bgDef = darken($bg-gray, 1%);
   position: relative;
   display: inline-block;
   padding: 6px 12px;
@@ -25,10 +25,6 @@
     color: $gray-600;
   }
 
-  .octicon {
-    vertical-align: text-top;
-  }
-
   .counter {
     display: inline-block;
     padding: 1.5px 4px;
@@ -36,8 +32,8 @@
     font-size: 12px;
     font-weight: bold;
     line-height: 10px;
-    color: $text-gray-light;
-    background-color: darken($bgDef, 5%);
+    color: lighten($text-gray, 3%);
+    background-color: darken($bgDef, 6%);
     border-radius: 6 * $border-radius;  // if
   }
 
@@ -53,11 +49,11 @@
   &.selected,
   &:focus {
     outline: 0;
-    border-color: lighten($blue-400, 5%);
+    border-color: lighten($border-blue, 10%);
   }
 
   &:active {
-    background-color: $bgDef * 0.85;
+    background-color: darken($bgDef, 6%);
   }
 
   &[disabled], &.disabled {
@@ -70,7 +66,7 @@
 .btn-primary {
   var bgDef = $green;
   color: $gray-100;
-  border-color: darken($bgDef, 5%);
+  border-color: darken($border-green, 8%);
   background-color: $bgDef;
   .counter {
     color: $bgDef;
@@ -80,7 +76,7 @@
   &:hover {
     color: $white;
     background-color: darken($bgDef, 5%);
-    border-color: darken($bgDef, 10%);
+    border-color: darken($border-green, 15%);
     .counter {
       background-color: $gray-100;
     }
@@ -89,13 +85,11 @@
     }
   }
 
-  &:active {
-    background-color: darken($bgDef, 10%);
-  }
-
+  &:active,
   &.selected,
   &:focus {
-    border-color: darken($blue-400, 5%);
+    border-color: darken($border-green,18%);
+    background-color: darken($bgDef, 8%);
   }
   &[disabled], &.disabled {
     background-color: desaturate($green-300, 30%) !important;
@@ -105,12 +99,12 @@
 }
 
 .btn-danger {
-  var bgDef = $red-400;
+  var bgDef = $red;
   color: $text-red;
   &:hover {
     color: $white;
     background-color: $bgDef;
-    border-color: $border-red;
+    border-color: darken($border-red, 10%);
     .counter {
       color: $bgDef;
       background-color: $white;
@@ -119,7 +113,8 @@
   }
 
   &:active {
-    background-color: $bgDef * 0.8;
+    background-color: darken($bgDef, 8%);
+    border-color: darken($border-red, 16%);
   }
 
   &[disabled], &.disabled {
@@ -187,7 +182,7 @@ a.btn-with-count {
   }
 }
 a.social-count {
-  var bgDef = darken($gray-100, 2%);
+  var bgDef = $bg-gray;
   float: left;
   padding: 3px 7px;
   font-size: $font-size-small;
@@ -203,6 +198,7 @@ a.social-count {
     text-decoration: none;
     color: $text-blue;
     cursor: pointer;
+    background-color: darken($bgDef, 3%);
   }
   &:focus {
     outline: 0;

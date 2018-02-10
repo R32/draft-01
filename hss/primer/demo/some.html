@@ -6,6 +6,7 @@
     <title>test</title>
     <link rel="stylesheet" type="text/css" href="../../../dist/style.css" />
     <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../../dist/libs/js/polyfill.js"></script>
     <link rel="stylesheet" type="text/css" href="../../../dist/ie8.css">
     <![endif]-->
     <style type="text/css">
@@ -24,11 +25,23 @@
             border-style: solid;
             text-indent: 1em;
         }
+
+      .mb-2 {
+        margin-bottom: 8px !important;
+      }
+      .mr-2 {
+        margin-right: 8px !important;
+      }
+      .mt-2 {
+        margin-top: 8px !important;
+      }
+      .ml-2 {
+        margin-left: 8px !important;
+      }
     </style>
 </head>
 <body>
   <div class="container">
-
     <div>
       <h3>Buttons</h3>
       <p>
@@ -368,8 +381,96 @@
       Dismissable flash message goes here.
     </div>
 
+    <hr />
+    <h3>Tooltips</h3>
+    <div>
+      <span class="tooltipped tooltipped-w border p-2 mb-2 mr-2 float-left" aria-label="This is the tooltip on the West side.">
+        Tooltip West
+      </span>
+      <span class="tooltipped tooltipped-ne border p-2 mb-2 mr-2 float-left" aria-label="Tooltipped NE and aligned left.">
+        Tooltip North East
+      </span>
+      <span class="tooltipped tooltipped-se border p-2 mb-2 mr-2 float-left" aria-label="Tooltipped SW and aigned left.">
+        Tooltip South East
+      </span>
+      <span class="tooltipped tooltipped-nw border p-2 mb-2 mr-2 float-left" aria-label="Tooltipped NW and aligned right.">
+        Tooltip North West
+      </span>
+      <span class="tooltipped tooltipped-sw border p-2 mb-2 mr-2 float-left" aria-label="Tooltipped SE and aligned right.">
+        Tooltip South West
+      </span>
+      <span class="tooltipped tooltipped-e border p-2 mb-2 mr-2 float-left" aria-label="This is the tooltip on the East side.">
+        Tooltip East
+      </span>
+    </div>
+    <br clear="both" />
+    <hr />
+    <h3>Box</h3>
+    <div class="Box-example">
+      <div class="Box">
+        <div class="Box-header">
+          <h3 class="Box-title">
+            Box title
+          </h3>
+        </div>
+        <div class="Box-body">
+          Box body
+        </div>
+        <div class="Box-footer">
+          Box footer
+        </div>
+      </div>
+      <br />
+      <div class="Box Box--condensed">
+        <ul>
+          <li class="Box-row Box-row--yellow">Box-row  &amp; Box-row--yellow</li>
+          <li class="Box-row Box-row--unread">Box row &amp; Box-row--unread</li>
+          <li class="Box-row Box-row--gray">Box row &amp; Box-row--gray</li>
+          <li class="Box-row Box-row--hover-gray">Box row &amp; Box-row--hover-gray</li>
+          <li class="Box-row Box-row--hover-blue">Box row &amp; Box-row--hover-blue</li>
+          <li class="Box-row Box-row--blue">Box row &amp; Box-row--blue</li>
+          <li class="Box-row"><a class="Box-row-link" href="#">Box row link</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <hr />
+    <h3>Popover</h3>
+    <div class="position-relative text-center">
+      <div class="Popover">
+        <div id="pop_c" class="Popover-message text-left p-4 Box box-shadow-large">
+          <h4 class="mb-2">Popover heading</h4>
+          <p>Message about this particular piece of UI.</p>
+          <button id="pop_btn" class="btn btn-outline mt-2 text-bold">Style Change !</button>
+        </div>
+      </div>
+    </div>
     <div class="padding" style="height: 200px"></div>
     <hr />
   </div>
+
+
+  <script type="text/javascript">
+    var pop_state = 0;
+    document.getElementById("pop_btn").onclick = function(e) {
+      // some issues in IE8.
+      var styles = [
+        "", "Popover-message--top-right", "Popover-message--top-left",
+        "Popover-message--right", "Popover-message--right-top", "Popover-message--right-bottom",
+        "Popover-message--bottom", "Popover-message--bottom-right","Popover-message--bottom-left",
+        "Popover-message--left", "Popover-message--left-top", "Popover-message--left-bottom"
+      ];
+      var pop_c = document.getElementById("pop_c");
+      if (pop_state != 0) {
+        pop_c.classList.remove(styles[pop_state]);
+      }
+      ++ pop_state;
+      if (pop_state == styles.length) pop_state = 0;
+
+      if (pop_state != 0) {
+        pop_c.classList.add(styles[pop_state]);
+      }
+    }
+  </script>
 </body>
 </html>

@@ -23,7 +23,7 @@ label {
   line-height: 20px;
   color: $text-gray-dark;
   vertical-align: middle;
-  background-color: $bg-gray-light;
+  background-color: $bg-gray;
   background-repeat: no-repeat;                 // Repeat and position set for form states (success, error, etc)
   background-position: CSS("right 8px center"); // For form validation. This keeps images 8px from right and centered vertically.
   border: 1px solid $border-gray;
@@ -169,8 +169,8 @@ label {
   // IE9 hacks to reduce padding
   padding-right: $spacer-4;
   padding-right: CSS("8px\\9");
-  // $bg-gray-light: darken($gray-100, 1%) => #F3F5F8
-  background: CSS('#F3F5F8 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") no-repeat right 8px center');
+  // $bg-gray
+  background: CSS('#F6F8fa url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") no-repeat right 8px center');
   // IE9 hacks to hide the background-image
   background-image: CSS("none\\9");
   background-repeat: no-repeat;

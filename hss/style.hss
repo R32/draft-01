@@ -1,5 +1,5 @@
-@import("primer");
-@import("comp");
+@import("primer")
+@import("comp")
 
 var hdHeight = 20px;
 #header {

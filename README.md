@@ -11,13 +11,17 @@ HTML
 
 hss 代码主要参照了 [primer-css](https://github.com/primer/primer-css)
 
-* [x] reset
+* [x] reset(including "base")
 * [x] color scheme. in `misc.hss`
 * [x] layout, only simple grid system
 * [x] markdown
 * [x] button
+* [x] form
+* [x] alter
+* [x] tooltip (part of)
+* [x] box
+* [x] popover
 
 
 ### Note
 
-对于 Tooltip 在 IE8 中, 如果想要背影透明(``)，则没有三角符,

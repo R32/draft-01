@@ -2,14 +2,21 @@
 
 .markdown-body {
 
-  var margin = $font16;
+  var md-margin = $spacer-3; // 16px
 
   font-family: $body-font;
-  font-size: $font16;
+  font-size: $h4-size;
   line-height: $body-line-height;
   word-wrap: break-word;
 
   $clearfix;
+
+  > *:first-child {
+    margin-top: 0 !important;
+  }
+  > *:last-child {
+    margin-bottom: 0 !important;
+  }
 
   .absent {
     color: $red-600;
@@ -17,7 +24,7 @@
 
   .anchor {
     float: left;
-    padding-right: 4px;
+    padding-right: $spacer-1;
     margin-left: -20px;
     line-height: 1;
 
@@ -34,20 +41,13 @@
   table,
   pre {
     margin-top: 0;
-    margin-bottom: $margin;
-  }
-
-  > :first-child {
-    margin-top: 0;
-  }
-  > :last-child {
-    margin-bottom: 0;
+    margin-bottom: $md-margin;
   }
 
   hr {
-    height: 0.25em;
+    height: $em-spacer-3;
     padding: 0;
-    margin: $margin * 1.5 0;
+    margin: $spacer-4 0;
     background-color: $gray-200;
     border: 0;
   }
@@ -62,10 +62,6 @@
     }
     > :last-child {
       margin-bottom: 0;
-    }
-    p {
-      margin-bottom: $margin * 0.5;
-      line-height: $lh-condensed;
     }
   }
 
@@ -87,7 +83,7 @@
   var list = {
     ul,
     ol {
-      padding-left: $margin;
+      padding-left: 2em;
       &.no-list {
         padding: 0;
         list-style-type: none;
@@ -98,15 +94,14 @@
     ul ul, ol ul {
       margin-top: 0;
       margin-bottom: 0;
-      padding-left: $margin * 1.5;
     }
 
     li > p {
-      margin-top: $margin;
+      margin-top: $md-margin;
     }
 
     li + li {
-      margin-top: 0.25em;
+      margin-top: $em-spacer-3;
     }
 
     dl {
@@ -114,15 +109,15 @@
 
       dt {
         padding: 0;
-        margin-top: $margin;
+        margin-top: $md-margin;
         font-size: 1em;
         font-style: italic;
         font-weight: $font-weight-bold;
       }
 
       dd {
-        padding: 0 $margin;
-        margin-bottom: $margin;
+        padding: 0 $md-margin;
+        margin-bottom: $md-margin;
       }
     }
   }
@@ -134,14 +129,14 @@
       th {
         padding: 5px;
         overflow: hidden;
-        font-size: 12px;
+        font-size: $font-size-small;
         line-height: 1;
         text-align: left;
         white-space: nowrap;
       }
 
       .blob-num {
-        padding: 10px 8px 9px;
+        padding: 10px $spacer-2 9px;
         text-align: right;
         background: $bg-white;
         border: 0;
@@ -195,8 +190,8 @@
     h4,
     h5,
     h6 {
-      margin-top: $margin * 1.5;
-      margin-bottom: $margin;
+      margin-top: $spacer-4;
+      margin-bottom: $md-margin;
       font-weight: $font-weight-bold;
       line-height: $lh-condensed;
 
@@ -260,13 +255,7 @@
       margin: 0;
       font-size: 85%;
       background-color: rgba($black, 0.05);
-      border-radius: 3px; // don't add padding, gives scrollbars
-
-      &:before,
-      &:after {
-        letter-spacing: -0.2em; // this creates padding
-          content: "\00a0";
-      }
+      border-radius: $border-radius;
 
       br { display: none; }
     }
@@ -289,7 +278,7 @@
     }
 
     .highlight {
-      margin-bottom: $margin;
+      margin-bottom: $md-margin;
 
       pre {
         margin-bottom: 0;
@@ -299,18 +288,18 @@
 
     .highlight pre,
     pre {
-      padding: $margin;
+      padding: $md-margin;
       overflow: auto;
       font-size: 85%;
       line-height: 1.45;
       background-color: $gray-100;
-      border-radius: 3px;
+      border-radius: $border-radius;
     }
 
     pre code,
     pre tt {
       display: inline;
-      max-width: CSS("auto"); // TODO: Is "auto" correct?
+      max-width: none; // TODO: Is "auto" correct?
       padding: 0;
       margin: 0;
       overflow: visible;
@@ -318,11 +307,6 @@
       word-wrap: normal;
       background-color: transparent;
       border: 0;
-
-      &:before,
-      &:after {
-        content: normal;
-      }
     }
   }
 
