@@ -19,7 +19,7 @@ var tooltip-duration = 0.2s;
   font-family: $body-font;
   font-size: 11px;
   line-height: 1.5;
-  -webkit-font-smoothing: CSS("subpixel-antialiased");
+  -webkit-font-smoothing: subpixel-antialiased;
   color: $tooltip-text-color;
   text-align: center;
   text-decoration: none;

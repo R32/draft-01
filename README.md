@@ -21,6 +21,9 @@ hss 代码主要参照了 [primer-css](https://github.com/primer/primer-css)
 * [x] tooltip (part of)
 * [x] box
 * [x] popover
+* [x] lables
+* [x] blankslate
+* [x] avatar (part of)
 
 
 ### Note

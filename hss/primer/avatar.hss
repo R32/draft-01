@@ -1,0 +1,111 @@
+@import("vars")
+
+.avatar {
+  display: inline-block;
+  overflow: hidden; // Ensure page layout in Firefox should images fail to load
+  line-height: $lh-condensed-ultra;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+
+.avatar-small { border-radius: 2px; }
+
+.avatar-link {
+  float: left;
+  line-height: $lh-condensed-ultra;
+}
+
+// User for example on /stars and /user for grids of avatars
+.avatar-group-item {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.avatar-parent-child {
+  position: relative;
+}
+
+.avatar-child {
+  position: absolute;
+  right: -15%;
+  bottom: -9%;
+  background-color: $bg-white; // For transparent backgrounds
+  border-radius: 2px;
+  box-shadow: -2px -2px 0 rgba($white, 0.8);
+}
+
+// Right aligned variation
+.AvatarStack--right {
+	position: relative;
+  .AvatarStack-body {
+  	position: absolute;
+    display: flex;
+    &:hover .avatar {
+      margin-left: 0;
+    }
+  }
+  .avatar {
+  	position: relative;
+    margin-left: -11px;
+    background-color: $bg-white;
+    border-right: 0;
+    border-radius: 2px;
+    border-left: $border-width $border-style $white;
+    transition: margin 0.1s ease-in-out;
+    // z-index: 2; 通过程序来为每个图片添加一个实现这个。
+    &:first-child {
+  		margin-left: 0;
+  	}
+  }
+}
+
+// Circle badge icon with drop shadow for icons and logos
+.CircleBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: $box-shadow-medium;
+}
+
+.CircleBadge-icon {
+  max-width: 60% !important;
+  height: auto !important;
+  max-height: 55% !important;
+}
+
+// Small badge
+.CircleBadge--small {
+  width: 56px;
+  height: 56px;
+}
+
+// Medium badge
+.CircleBadge--medium {
+  width: 96px;
+  height: 96px;
+}
+
+// Large badge
+.CircleBadge--large {
+  width: 128px;
+  height: 128px;
+}
+
+// Dashed line that connects badges..
+// Wrap around 2 or more badges to create a horizonal line:
+.DashedConnection {
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    content: "";
+    border-bottom: 2px dashed $border-gray;
+  }
+  .CircleBadge {
+    position: relative;
+  }
+}

@@ -46,25 +46,40 @@
       <h3>Buttons</h3>
       <p>
       <input type="button" value="default" class="btn" />
-      <button class="btn" onclick="return false">默认<span class="counter">11</span></button>
+      <button class="btn" onclick="return false">默认<span class="Counter">11</span></button>
       <input type="button" value="small" class="btn btn-sm"  />
       <input type="button" value="disabled" class="btn" disabled="disabled" />
       </p><p>
 
       <input type="button" value="default" class="btn btn-primary" />
-      <button class="btn btn-primary" onclick="return false">默认<span class="counter">11</span></button>
+      <button class="btn btn-primary" onclick="return false">默认<span class="Counter">11</span></button>
       <input type="button" value="small" class="btn btn-sm btn-primary" />
       <input type="button" value="disabled" class="btn btn-primary" disabled="disabled" />
       </p><p>
       <input type="button" value="default" class="btn btn-danger" />
-      <button class="btn btn-danger" onclick="return false">默认<span class="counter">11</span></button>
+      <button class="btn btn-danger" onclick="return false">默认<span class="Counter">11</span></button>
       <input type="button" value="small" class="btn btn-sm btn-danger" />
       <input type="button" value="disabled" class="btn btn-danger" disabled="disabled" />
       </p><p>
       <input type="button" value="default" class="btn btn-outline" />
-      <button class="btn btn-outline" onclick="return false">默认<span class="counter">11</span></button>
+      <button class="btn btn-outline" onclick="return false">默认<span class="Counter">11</span></button>
       <input type="button" value="small" class="btn btn-sm btn-outline" />
       <input type="button" value="disabled" class="btn btn-outline" disabled="disabled" />
+      </p><p>
+      <input type="button" value="default" class="btn btn-outline-purple" />
+      <button class="btn btn-outline-purple" onclick="return false">默认<span class="Counter">11</span></button>
+      <input type="button" value="small" class="btn btn-sm btn-outline-purple" />
+      <input type="button" value="disabled" class="btn btn-outline-purple" disabled="disabled" />
+      </p><p>
+      <input type="button" value="default" class="btn btn-outline-orange" />
+      <button class="btn btn-outline-orange" onclick="return false">默认<span class="Counter">11</span></button>
+      <input type="button" value="small" class="btn btn-sm btn-outline-orange" />
+      <input type="button" value="disabled" class="btn btn-outline-orange" disabled="disabled" />
+      </p><p>
+      <input type="button" value="default" class="btn btn-outline-green" />
+      <button class="btn btn-outline-green" onclick="return false">默认<span class="Counter">11</span></button>
+      <input type="button" value="small" class="btn btn-sm btn-outline-green" />
+      <input type="button" value="disabled" class="btn btn-outline-green" disabled="disabled" />
       </p>
 
       <a class="message">link without HREF</a> <sup>sup</sup> <a class="message" href="#">link with HREF</a><sub>sub</sub>
@@ -445,6 +460,74 @@
         </div>
       </div>
     </div>
+    <hr style="margin-top: 235px" />
+    <h3>Labels</h3>
+    <div class="labels-example">
+      Counter:
+      <span class="Counter">16</span>
+      <span class="Counter Counter--gray">32</span>
+      <span class="Counter Counter--gray-light">64</span>
+      <br /><br />
+      Lables:
+      <span title="Label: gray label" class="Label Label--gray">gray label</span>
+      <span title="Label: dark gray label" class="Label Label--gray-darker ml-2">dark gray label</span>
+      <span title="Label: orange label" class="Label Label--orange ml-2">orange label</span>
+      <span title="Label: outline label" class="Label Label--outline ml-2">outlined label</span>
+      <span title="Label: green outline label" class="Label Label--outline Label--outline-green ml-2">green outlined label</span>
+      <span title="Label: default label" class="Label bg-blue ml-2">default label</span>
+      <br /><br />
+      States:
+      <span class="State">Default</span>
+      <span title="Status: open" class="State State--green ml-2">Open</span>
+      <span title="Status: closed" class="State State--red  ml-2">Closed</span>
+      <span title="Status: merged" class="State State--purple  ml-2">Merged</span>
+    </div>
+    <hr />
+    <h3>blankslate</h3>
+    <div class="blankslate">
+      <h3>This is a blank slate</h3>
+      <p>Use it to provide information when no dynamic content exists.</p>
+    </div><br />
+    <div class="blankslate blankslate-narrow">
+      <h3>This is a blank slate</h3>
+      <p>Use it to provide information when no dynamic content exists.</p>
+    </div><br />
+    <div class="blankslate blankslate-capped">
+      <h3>This is a blank slate</h3>
+      <p>Use it to provide information when no dynamic content exists.</p>
+    </div><br />
+    <div class="blankslate blankslate-spacious">
+      <h3>This is a blank slate</h3>
+      <p>Use it to provide information when no dynamic content exists.</p>
+    </div><br />
+    <div class="blankslate blankslate-large">
+      <h3>This is a blank slate</h3>
+      <p>Use it to provide information when no dynamic content exists.</p>
+    </div><br />
+    <div class="blankslate blankslate-clean-background">
+      <h3>This is a blank slate</h3>
+      <p>Use it to provide information when no dynamic content exists.</p>
+    </div>
+    <hr />
+    <h3>avatar</h3>
+    <div class="avatar-example">
+      <img class="avatar" src="avatar.png" width="72" height="72" />
+      <img class="avatar avatar-small ml-2" src="avatar.png" width="32" height="32" />
+    </div><br />
+    <div class="avatar-parent-child float-left ml-2 box">
+      <img class="avatar" src="avatar.png" width="48" height="48" />
+      <img class="avatar avatar-child" src="avatar.png" width="20" height="20" />
+    </div><br clear="both" /><br />
+    <div class="AvatarStack--right">
+      <div class="AvatarStack-body">
+        <img style="z-index: 5" class="avatar" height="20" src="avatar.png" width="20" />
+        <img style="z-index: 4" class="avatar" height="20" src="avatar.png" width="20" />
+        <img style="z-index: 3" class="avatar" height="20" src="avatar.png" width="20" />
+      </div>
+    </div>
+
+    <br clear="both" /><hr />
+    <h3>more...</h3>
     <div class="padding" style="height: 200px"></div>
     <hr />
   </div>

@@ -25,16 +25,9 @@
     color: $gray-600;
   }
 
-  .counter {
-    display: inline-block;
+  .Counter {
     padding: 1.5px 4px;
     margin-left: 3px;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 10px;
-    color: lighten($text-gray, 3%);
-    background-color: darken($bgDef, 6%);
-    border-radius: 6 * $border-radius;  // if
   }
 
   &:hover {
@@ -66,18 +59,18 @@
 .btn-primary {
   var bgDef = $green;
   color: $gray-100;
-  border-color: darken($border-green, 8%);
+  border-color: darken($bgDef, 5%);
   background-color: $bgDef;
-  .counter {
+  .Counter {
     color: $bgDef;
-    background-color: darken($gray-100, 5%);
+    background-color: $gray-200;
   }
 
   &:hover {
     color: $white;
-    background-color: darken($bgDef, 5%);
-    border-color: darken($border-green, 15%);
-    .counter {
+    background-color: darken($bgDef, 3%);
+    border-color: darken($bgDef, 8%);
+    .Counter {
       background-color: $gray-100;
     }
     &[disabled], &.disabled {
@@ -85,62 +78,134 @@
     }
   }
 
-  &:active,
   &.selected,
   &:focus {
-    border-color: darken($border-green,18%);
+    border-color: darken($bgDef,12%);
+  }
+  &:active {
+    border-color: darken($bgDef,12%);
     background-color: darken($bgDef, 8%);
   }
   &[disabled], &.disabled {
-    background-color: desaturate($green-300, 30%) !important;
-    color: $white; /* 实际上 IE8 中在 disabled 之后只能更改 bg, 但 FF 可以改这个 */
+    background-color: $green-100 !important;
+    color: $text-gray; /* 实际上 IE8 中在 disabled 之后只能更改 bg, 但 FF 可以改这个 */
     border-color: $border-green-light;
   }
 }
 
 .btn-danger {
   var bgDef = $red;
-  color: $text-red;
+  color: $bgDef;
   &:hover {
     color: $white;
     background-color: $bgDef;
-    border-color: darken($border-red, 10%);
-    .counter {
+    border-color: $bgDef;
+    .Counter {
       color: $bgDef;
-      background-color: $white;
+      background-color: $gray-100;
     }
+  }
 
+  &.selected, &:focus {
+    border-color: $bgDef;
   }
 
   &:active {
     background-color: darken($bgDef, 8%);
-    border-color: darken($border-red, 16%);
+    border-color: darken($bgDef, 8%);
   }
 
   &[disabled], &.disabled {
-    color: $text-red;
+    color: $bgDef;
   }
 }
 
 .btn-outline {
   var bgDef = $blue-400;
-  color: $text-blue;
-
+  color: $bgDef;
   &:hover {
     color: $white;
+    border-color: $bgDef;
     background-color: $bgDef;
-    .counter {
+    .Counter {
       color: $bgDef;
-      background-color: $white;
+      background-color: $gray-100;
     }
   }
-
   &:active {
     background-color: $bgDef * 0.8;
   }
-
   &[disabled], &.disabled {
-    color: $text-blue;
+    color: $bgDef;
+  }
+}
+
+.btn-outline-purple {
+  var bgDef = $purple;
+  color: $bgDef;
+  &:hover {
+    color: $white;
+    border-color: $bgDef;
+    background-color: $bgDef;
+    .Counter {
+      color: $bgDef;
+      background-color: $gray-100;
+    }
+  }
+  &.selected, &:focus {
+    border-color: $bgDef;
+  }
+  &:active {
+    background-color: $bgDef * 0.8;
+  }
+  &[disabled], &.disabled {
+    color: $bgDef;
+  }
+}
+
+.btn-outline-orange {
+  var bgDef = $orange;
+  color: $bgDef;
+  &:hover {
+    color: $white;
+    background-color: $bgDef;
+    border-color: $bgDef;
+    .Counter {
+      color: $bgDef;
+      background-color: $gray-100;
+    }
+  }
+  &.selected, &:focus {
+    border-color: $bgDef;
+  }
+  &:active {
+    background-color: $bgDef * 0.8;
+  }
+  &[disabled], &.disabled {
+    color: $bgDef;
+  }
+}
+
+.btn-outline-green {
+  var bgDef = $green;
+  color: $bgDef;
+  &:hover {
+    color: $white;
+    background-color: $bgDef;
+    border-color: $bgDef;
+    .Counter {
+      color: $bgDef;
+      background-color: $gray-100;
+    }
+  }
+  &.selected, &:focus {
+    border-color: $bgDef;
+  }
+  &:active {
+    background-color: $bgDef * 0.8;
+  }
+  &[disabled], &.disabled {
+    color: $bgDef;
   }
 }
 
@@ -160,6 +225,8 @@
   width: 100%;
   text-align: center;
 }
+
+
 
 
 /*!
