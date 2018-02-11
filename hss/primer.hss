@@ -1,5 +1,6 @@
 @import("primer/vars")
 @import("primer/reset")
+@import("primer/breadcrumb")
 @import("primer/layout")
 @import("primer/blankslate")
 @import("primer/labels")

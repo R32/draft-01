@@ -258,7 +258,7 @@ var border-radius = 3px; // 0 or 3px
 var border-width = 1px;
 var border-color =$border-gray;
 var border-style = solid;
-var border = $border-width $border-color $border-style;
+var border = $border-width $border-style $border-color;
 
 // works on IE9+
 var box-shadow = 0 1px 1px rgba($black, 0.1);

@@ -1,7 +1,7 @@
 @import("vars")
 
 /* Add a gray border */
-.border            {border: 1px solid $border-gray-light !important;}
+.border            {border: $border !important;}
 .border-blue       {border-color: $border-blue        !important;}
 .border-green      {border-color: $border-green       !important;}
 .border-red        {border-color: $border-red         !important;}
@@ -41,6 +41,8 @@
 .text-white       {color: $text-white       !important;}
 .text-inherit     {color: inherit           !important;}
 
+.text-small {font-size: $h6-size !important;}     // 12px
+.alt-text-small {font-size: $h5-size !important;} // 14px
 .text-right  {text-align:right  !important;}
 .text-left   {text-align:left   !important;}
 .text-center {text-align:center !important;}
@@ -82,41 +84,18 @@
 
 .float-left { float: left; }
 .float-right{ float: right;}
-
-.clearfix {
-  $clearfix;
-}
+.clearfix { $clearfix;}
 
 .no-select {
   user-select: none;
 }
 
-.box-shadow {
-  box-shadow: $box-shadow !important;
-}
-
-.box-shadow-medium {
-  box-shadow: $box-shadow-medium !important;
-}
-
-.box-shadow-large {
-  box-shadow: $box-shadow-large !important;
-}
-
-.box-shadow-extra-large {
-  box-shadow: $box-shadow-extra-large !important;
-}
-
-// Turn off box shadow
-.box-shadow-none {
-  box-shadow: none !important;
-}
+.box-shadow { box-shadow: $box-shadow !important;}
+.box-shadow-medium { box-shadow: $box-shadow-medium !important;}
+.box-shadow-large { box-shadow: $box-shadow-large !important; }
+.box-shadow-extra-large { box-shadow: $box-shadow-extra-large !important;}
+.box-shadow-none { box-shadow: none !important;} // Turn off box shadow
 
 // margin & padding
-.p-2 {
-  padding: $spacer-2 !important;
-}
-.p-4 {
-  padding: $spacer-4 !important;
-}
-
+.p-2 { padding: $spacer-2 !important; }
+.p-4 { padding: $spacer-4 !important; }

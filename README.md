@@ -12,10 +12,10 @@ HTML
 hss 代码主要参照了 [primer-css](https://github.com/primer/primer-css)
 
 * [x] reset(including "base")
-* [x] color scheme. in `misc.hss`
+* [x] misc (bg-color, border-color, text-color, clearfix ...)
 * [x] layout, only simple grid system
 * [x] markdown
-* [x] button
+* [x] button (inluding button-outline)
 * [x] form
 * [x] alter
 * [x] tooltip (part of)
@@ -24,6 +24,8 @@ hss 代码主要参照了 [primer-css](https://github.com/primer/primer-css)
 * [x] lables
 * [x] blankslate
 * [x] avatar (part of)
+* [x] breadcrumb
+
 
 
 ### Note
