@@ -195,6 +195,12 @@ var spacer-4 = 24px;
 var spacer-5 = 32px;
 var spacer-6 = 40px;
 
+var pd-04    =  4px;
+var pd-06    =  6px;
+var pd-08    =  8px;
+var pd-10    = 10px;
+var pd-12    = 12px;
+
 var em-spacer-1 = 0.0625em; // 1/16
 var em-spacer-2 = 0.125em;  // 1/8
 var em-spacer-3 = 0.25em;   // 1/4

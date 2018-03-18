@@ -16,10 +16,10 @@ label {
 // 由于 \0 的 hack 也能被 ie9, 10 所识别, 因此需要一个单独的 ie8.css 文件
 .form-control,
 .form-select {
-  padding: 6px $spacer-2;
+  padding: $pd-06 $pd-08;
   font-size: $body-font-size;
   font-family: $label-font;
-  min-height: 34px;
+  min-height: 20px;
   line-height: 20px;
   color: $text-gray-dark;
   vertical-align: middle;
@@ -42,16 +42,18 @@ label {
   }
 }
 
+.form-select {
+  font-size: $body-font-size - 2; //
+}
 
-.input-sm {
-  min-height: 28px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+.input-sm, .select-sm {
+  padding-top: $pd-06 * 0.5;
+  padding-bottom: $pd-06 * 0.5;
   font-size: $font-size-small;
 }
 
 .input-lg {
-  padding: 0.75em 1.25em; // same as btn-lg
+  padding: $pd-10 $pd-10 * 2; // same as btn-lg
   font-size: $h4-size;
 }
 
@@ -87,8 +89,8 @@ label {
   label {
     em.highlight {
       position: relative;
-      left: 0-$spacer-1;
-      padding: 2px $spacer-1;
+      left: 0 - $pd-04;
+      padding: 2px $pd-04;
       font-style: normal;
       background: $yellow-100;
       border-radius: $border-radius;
@@ -111,22 +113,6 @@ label {
   }
 }
 
-// TODO: IE8 不支持 :checked 因此这个效果不会起作用. 而且 [checked] 也不起作用, 因此暂时移除它。 需要 JS 来实现,
-/*
-.form-checkbox-details {
-  display: none;
-}
-
-.form-checkbox-details-trigger {
-  &:checked {
-    ~ * .form-checkbox-details, // child of sibling
-    ~ .form-checkbox-details { // or sibling
-      display: block;
-    }
-  }
-}
-*/
-
 .form-actions {
   $clearfix;
 
@@ -140,7 +126,7 @@ label {
 }
 
 .form-warning {
-  padding: $spacer-2 10px;
+  padding: $pd-08 $pd-10;
   margin: 10px 0;
   font-size: $h5-size;
   color: $yellow-900;
@@ -162,7 +148,7 @@ label {
 .form-select {
   display: inline-block;
   max-width: 100%;
-  min-height: 34px;
+  //min-height: 34px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -186,13 +172,6 @@ label {
   &[multiple] {
     height: auto;
   }
-}
-
-.select-sm {
-  min-height: 28px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-size: $font-size-small;
 }
 
 // Form groups
@@ -253,7 +232,7 @@ label {
   // stylelint-disable selector-no-qualifying-type
   dd {
     h4 {
-      margin: $spacer-1 0 0;
+      margin: $pd-04 0 0;
 
       &.is-error { color: $text-red; }
 
@@ -322,8 +301,8 @@ label {
       z-index: 10;
       display: block; // Show up in errored/warn state
       max-width: 450px; // Keep our long errors readable
-      padding: 5px $spacer-2;
-      margin: $spacer-1 0 0;
+      padding: 5px $pd-08;
+      margin: $pd-04 0 0;
       font-size: 13px;
       font-weight: $font-weight-normal;
       border-style: solid;
@@ -394,7 +373,7 @@ label {
 
 .note {
   min-height: 17px;
-  margin: $spacer-1 0 2px;
+  margin: $pd-04 0 2px;
   font-size: $font-size-small;
   color: $text-gray;
 

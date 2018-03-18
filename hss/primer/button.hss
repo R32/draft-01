@@ -4,7 +4,7 @@
   var bgDef = darken($bg-gray, 1%);
   position: relative;
   display: inline-block;
-  padding: 6px 12px;
+  padding: $pd-06 $pd-12;
   font-size: $body-font-size;
   font-weight: $font-weight-bold;
   font-family: $label-font;
@@ -42,7 +42,7 @@
   &.selected,
   &:focus {
     outline: 0;
-    border-color: lighten($border-blue, 10%);
+    border-color: lighten($blue-400, 8%);
   }
 
   &:active {
@@ -210,14 +210,14 @@
 }
 
 .btn-sm {
-  padding: 3px 10px;
+  padding: $pd-06 * 0.5 $pd-10;
   font-size: $font-size-small;
   line-height: 20px;
 }
 
 .btn-lg {
-  padding: 0.75em 1.25em;
-  font-size: inherit;
+  padding: $pd-10 $pd-10 * 2;
+  font-size: $h4-size;
 }
 
 .btn-block {

@@ -47,12 +47,12 @@ dist/ie8.css: hss/ie8.hss hss/primer/vars.hss
 hss/primer.hss: $(foreach dir,hss/primer, $(wildcard $(dir)/*.hss))
 
 # polyfill
-dist/libs/js/polyfill.js: polyfill/classList.js polyfill/es6-promise.auto.js polyfill/fetch.js
+dist/libs/js/polyfill.js: polyfill/classList.js polyfill/es6-promise.js polyfill/fetch.js
 	$(CCJS) --js_output_file $@ --compilation_level WHITESPACE_ONLY --js $^
 
 polyfill-curl: fresh
 	curl \
-	-o polyfill/es6-promise.auto.js "https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.auto.js" \
+	-o polyfill/es6-promise.js "https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.js" \
 	-o polyfill/fetch.js "https://raw.githubusercontent.com/camsong/fetch-ie8/master/fetch.js"
 
 fresh:
