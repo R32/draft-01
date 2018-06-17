@@ -1,4 +1,4 @@
-@import("vars")
+@import("_vars")
 
 * { box-sizing: border-box; }
 

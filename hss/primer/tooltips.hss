@@ -1,4 +1,4 @@
-@import("vars")
+@import("_vars")
 
 var tooltip-max-width        = 250px;
 var tooltip-background-color = $black;

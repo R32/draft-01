@@ -1,4 +1,5 @@
-@import("vars")
+@import("_vars")
+
 // breadcrumb
 .breadcrumb-item {
   display: inline-block;

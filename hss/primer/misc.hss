@@ -1,4 +1,4 @@
-@import("vars")
+@import("_vars")
 
 /* Add a gray border */
 .border            {border: $border !important;}

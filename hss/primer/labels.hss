@@ -1,4 +1,4 @@
-@import("vars")
+@import("_vars")
 
 // Counters are rounded-corner badges for numbers
 .Counter {

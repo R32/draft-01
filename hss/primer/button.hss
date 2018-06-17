@@ -1,4 +1,4 @@
-@import("vars")
+@import("_vars")
 
 .btn {
   var bgDef = darken($bg-gray, 1%);

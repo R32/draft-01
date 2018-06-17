@@ -1,4 +1,4 @@
-@import("primer/vars")
+@import("primer/_vars")
 @import("primer/reset")
 @import("primer/breadcrumb")
 @import("primer/layout")

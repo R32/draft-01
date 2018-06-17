@@ -1,4 +1,4 @@
-@import("vars")
+@import("_vars")
 
 //var form-control-shadow = inset 0 1px 2px rgba($black, 0.075);
 //var btn-input-focus-shadow = 0 0 0 0.2em rgba($blue, 0.3);
